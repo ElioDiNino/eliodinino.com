@@ -4,6 +4,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
+import logo from '../images/logo.png';
+
 interface SubProps {
     children: React.ReactElement;
 }
@@ -80,8 +82,8 @@ export default function Header(props: MainProps) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                Elio Di Nino
+            <Typography variant="h2" sx={{ my: 2 }}>
+                <img src={logo} alt="Site logo (mobile drawer)" width='108px' height='37px' />
             </Typography>
             <Divider />
             <List>
@@ -113,11 +115,26 @@ export default function Header(props: MainProps) {
                             <MenuIcon />
                         </IconButton>
                         <Typography
-                            variant="h6"
+                            variant="h2"
+                            component="div"
+                            sx={{ flexGrow: 1, textAlign: 'center', display: { sm: 'none' } }}
+                        >
+                            <img src={logo} alt="Site logo" width='108px' height='37px' />
+                        </Typography>
+                        <IconButton
+                            color="inherit"
+                            edge="start"
+                            disabled={true}
+                            sx={{ mr: 2, display: { sm: 'none' } }}
+                        >
+                            <MenuIcon opacity="0" />
+                        </IconButton>
+                        <Typography
+                            variant="h2"
                             component="div"
                             sx={{ flexGrow: 1, textAlign: 'left', display: { xs: 'none', sm: 'block' } }}
                         >
-                            Elio Di Nino
+                            <img src={logo} alt="Site logo" width='108px' height='37px' />
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {navItems.map((item) => (
