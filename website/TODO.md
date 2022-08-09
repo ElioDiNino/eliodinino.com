@@ -6,6 +6,7 @@
 - Pick/make logo
 - SEO & logo size settings
     - Robots.txt
+- Image optimization
 - Look at report web vitals
 - Google Analytics setup
 - Sitemap generation
