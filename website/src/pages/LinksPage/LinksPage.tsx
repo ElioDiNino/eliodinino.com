@@ -16,7 +16,7 @@ const LinksPage = (props: any) => {
         <div className="background">
             <div className="frostedGlass">
                 <picture>
-                    <img src={profile} alt="avatar" width="40%" />
+                    <img className="profile" src={profile} alt="Profile" width="40%" />
                 </picture>
                 <br />
                 <h1>Elio Di Nino</h1>
