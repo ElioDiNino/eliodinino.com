@@ -1,0 +1,34 @@
+.background {
+    background-image: url(../../images/test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.frostedGlass {
+    width: 25rem;
+    height: auto;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+
+    padding: 3rem 1rem;
+}
+
+img {
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 0.5rem;
+}
+
+button {
+    margin: 10rem;
+}
