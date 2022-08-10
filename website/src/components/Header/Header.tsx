@@ -4,7 +4,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-import logo from '../images/logo.png';
+import './Header.css';
+import logo from '../../images/logo.png';
 
 interface SubProps {
     children: React.ReactElement;
@@ -37,6 +38,7 @@ function ElevationScroll(props: SubProps) {
 
     return React.cloneElement(children, {
         elevation: trigger ? 4 : 0,
+        color: trigger ? undefined : 'transparent',
     });
 }
 
@@ -101,9 +103,10 @@ export default function Header(props: MainProps) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return <>
-        <Box sx={{ display: 'flex' }}>
-            <ElevationScroll {...props}>
-                <AppBar component="nav">
+        <Box sx={{ display: 'flex' }} >
+            <ElevationScroll {...props} >
+                <AppBar component="nav" className="bar"
+                    sx={{ transition: "background-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out" }}>
                     <Toolbar>
                         <IconButton
                             color="inherit"
