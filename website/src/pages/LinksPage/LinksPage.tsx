@@ -9,6 +9,7 @@ import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 import './LinksPage.css';
 import profile from '../../images/profile.jpg';
+import gitlab from '../../images/gitlab-logo.svg';
 
 const LinksPage = (props: any) => {
     document.title = props.pageTitle + " - " + props.siteTitle;
@@ -30,7 +31,7 @@ const LinksPage = (props: any) => {
                 <Button variant="contained" sx={{ m: 1, backgroundColor: '#47a7d4', color: '#ffffff', '&:hover': { backgroundColor: '#357ea1' } }} startIcon={<PhotoCameraIcon />} href="https://photography.eliodinino.com" target="blank">
                     Photography Portfolio
                 </Button>
-                <h4>Social Media</h4>
+                <h4>Profiles</h4>
                 <IconButton href="https://www.linkedin.com/in/eliodinino/" target="blank">
                     <LinkedInIcon />
                 </IconButton>
@@ -39,6 +40,9 @@ const LinksPage = (props: any) => {
                 </IconButton>
                 <IconButton href="https://github.com/ElioDiNino/" target="blank">
                     <GitHubIcon />
+                </IconButton>
+                <IconButton href="https://github.com/ElioDiNino/" target="blank">
+                    <img src={gitlab} alt="GitLab" width="22" height="22" />
                 </IconButton>
             </div>
         </div>
