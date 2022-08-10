@@ -1,6 +1,5 @@
 - Make home page
     - Pick background
-- Make footer
 - Find contact form integration
 - Remove comments from index.html
 - Pick/make logo
