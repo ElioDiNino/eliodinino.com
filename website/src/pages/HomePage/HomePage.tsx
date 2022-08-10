@@ -1,12 +1,16 @@
 import * as React from "react";
 import { Paper } from "@mui/material";
 
+import './HomePage.css';
+
 const HomePage = () => {
     return <>
-        <h1>Home</h1>
-        <Paper>
-            <p style={{ height: "90vh" }}>Content</p>
-        </Paper>
+        <div className="homeBackground">
+            <h1>Welcome to my website!</h1>
+            {/* <Paper>
+                <p style={{ height: "90vh" }}>Content</p>
+            </Paper> */}
+        </div>
     </>
 }
 
