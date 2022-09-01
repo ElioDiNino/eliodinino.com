@@ -7,6 +7,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import './Header.css';
 import logo from '../../images/logo.png';
 
+// Custom interfaces
 interface SubProps {
     children: React.ReactElement;
 }
@@ -16,8 +17,10 @@ interface MainProps {
 }
 
 const drawerWidth = 240;
+// Specify navigation items
 const navItems = ['Home', 'Links', 'Contact'];
 
+// Hide the header upon scrolling
 function HideOnScroll(props: SubProps) {
     const { children } = props;
     const trigger = useScrollTrigger();
@@ -29,6 +32,7 @@ function HideOnScroll(props: SubProps) {
     );
 }
 
+// Elevate the header upon scrolling
 function ElevationScroll(props: SubProps) {
     const { children } = props;
     const trigger = useScrollTrigger({
@@ -42,6 +46,7 @@ function ElevationScroll(props: SubProps) {
     });
 }
 
+// Scroll to top button
 function ScrollTop(props: SubProps) {
     const { children } = props;
     const trigger = useScrollTrigger({
@@ -66,11 +71,11 @@ function ScrollTop(props: SubProps) {
             <Box
                 onClick={handleClick}
                 role="presentation"
-                sx={{ position: 'fixed', bottom: 16, right: 16 }}
+                sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 1 }}
             >
                 {children}
             </Box>
-        </Fade>
+        </Fade >
     );
 }
 
@@ -82,10 +87,11 @@ export default function Header(props: MainProps) {
         setMobileOpen(!mobileOpen);
     };
 
+    // Mobile drawer component
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h2" sx={{ my: 2 }}>
-                <img src={logo} alt="Site logo (mobile drawer)" width='108px' height='37px' />
+            <Typography variant="h2" sx={{ mt: 4, mb: 2 }}>
+                <a href="/"><img src={logo} alt="Site logo (mobile drawer)" width='108px' height='37px' /></a>
             </Typography>
             <Divider />
             <List>
@@ -100,14 +106,16 @@ export default function Header(props: MainProps) {
         </Box>
     );
 
+    // Checking window size
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return <>
-        <Box sx={{ display: 'flex' }} >
+        <Box sx={{ display: 'flex', mb: 4 }} >
             <ElevationScroll {...props} >
                 <AppBar component="nav" className="bar"
                     sx={{ transition: "background-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out" }}>
                     <Toolbar>
+                        {/* Mobile drawer handle */}
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
@@ -118,11 +126,11 @@ export default function Header(props: MainProps) {
                             <MenuIcon />
                         </IconButton>
                         <Typography
-                            variant="h2"
+                            variant="h1"
                             component="div"
                             sx={{ flexGrow: 1, textAlign: 'center', display: { sm: 'none' } }}
                         >
-                            <img src={logo} alt="Site logo" width='108px' height='37px' />
+                            <a href="/"><img src={logo} alt="Site logo" width='108px' height='37px' /></a>
                         </Typography>
                         <IconButton
                             color="inherit"
@@ -137,11 +145,11 @@ export default function Header(props: MainProps) {
                             component="div"
                             sx={{ flexGrow: 1, textAlign: 'left', display: { xs: 'none', sm: 'block' } }}
                         >
-                            <img src={logo} alt="Site logo" width='108px' height='37px' />
+                            <a href="/"><img src={logo} alt="Site logo" width='108px' height='37px' /></a>
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {navItems.map((item) => (
-                                <Button key={item} sx={{ color: '#fff' }} href={`/${item.toLowerCase()}`}>
+                                <Button key={item} size="large" sx={{ color: '#fff' }} href={`/${item.toLowerCase()}`}>
                                     {item}
                                 </Button>
                             ))}
