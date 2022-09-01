@@ -35,14 +35,14 @@ const LinksPage = (props: any) => {
                 <IconButton href="https://www.linkedin.com/in/eliodinino/" target="blank">
                     <LinkedInIcon />
                 </IconButton>
-                <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
-                    <InstagramIcon />
-                </IconButton>
                 <IconButton href="https://github.com/ElioDiNino/" target="blank">
                     <GitHubIcon />
                 </IconButton>
                 <IconButton href="https://gitlab.com/ElioDiNino/" target="blank">
                     <img src={gitlab} alt="GitLab" width="22" height="22" />
+                </IconButton>
+                <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
+                    <InstagramIcon />
                 </IconButton>
             </div>
         </div>
