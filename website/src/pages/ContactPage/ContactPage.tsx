@@ -10,6 +10,7 @@ import './ContactPage.css';
 
 const ContactPage = (props: any) => {
     const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
+    // Update browser title
     document.title = props.pageTitle + " - " + props.siteTitle;
     const [captchaResult, setCaptchaResult] = React.useState(false);
     const [name, setName] = React.useState("");

@@ -4,6 +4,7 @@ import { Paper, Button, Typography, Box } from "@mui/material";
 import './NoPage.css';
 
 const NoPage = (props: any) => {
+    // Update browser title
     document.title = props.pageTitle + " - " + props.siteTitle;
     return <>
         <Box sx={{ verticalAlign: 'middle', pb: 20 }}>

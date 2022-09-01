@@ -12,7 +12,7 @@ import NoPage from "./pages/404Page/NoPage";
 import LinksPage from "./pages/LinksPage/LinksPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 
-// Title in the browser
+// Main title in the browser
 const siteTitle = "Elio Di Nino";
 
 // Specifying what size to consider mobile

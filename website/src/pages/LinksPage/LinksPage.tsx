@@ -12,6 +12,7 @@ import profile from '../../images/profile.jpg';
 import gitlab from '../../images/gitlab-logo.svg';
 
 const LinksPage = (props: any) => {
+    // Update browser title
     document.title = props.pageTitle + " - " + props.siteTitle;
     return <>
         <div className="background">
