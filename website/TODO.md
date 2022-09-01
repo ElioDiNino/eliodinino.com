@@ -1,6 +1,4 @@
-- Make home page
-    - Pick background
-- Find contact form integration
+- Home page about fade in
 - Remove comments from index.html
 - Pick/make logo
 - SEO & logo size settings
@@ -10,4 +8,6 @@
 - Google Analytics setup
 - Sitemap generation
 - Edit package.json
+- Theme options
+- Specifier for job vs regular links page
 - Setup tests (see setupTests.ts)
