@@ -6,7 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export default function Footer() {
     return <>
-        <Paper sx={{ borderRadius: 0, pt: 3, pb: 2 }}>
+        <Paper sx={{ borderRadius: 0, pt: 3, pb: 2, position: "absolute", left: 0, right: 0, bottom: 0 }}>
             <IconButton href="https://www.linkedin.com/in/eliodinino/" target="blank" size="large">
                 <LinkedInIcon fontSize="inherit" />
             </IconButton>
