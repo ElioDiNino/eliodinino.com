@@ -1,12 +1,11 @@
 .homeBackground {
     display: grid;
-    height: 95vh;
 }
 
-#root {
-    background-image: url(../../images/home-background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.homeProfile {
+    border-radius: 20%;
+}
+
+.h2 {
+    margin-top: 20px;
 }
