@@ -16,10 +16,12 @@ const ContactPage = (props: any) => {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
+    // eslint-disable-next-line
     const [theme, setTheme] = React.useState("dark");
     const [key, setKey] = React.useState(0);
 
     // Pick captcha size based on screen size
+    // eslint-disable-next-line
     const [size, setSize] = React.useState<"normal" | "compact" | undefined>(() => {
         if (props.isMobile) {
             return "compact";
@@ -29,7 +31,8 @@ const ContactPage = (props: any) => {
     });
 
     // Form padding based on screen size
-    var formPad: number = props.isMobile ? formPad = 4 : formPad = 6;
+    var formPad: number
+    formPad = props.isMobile ? formPad = 4 : formPad = 6;
 
     // Form submit
     const sendEmail = (e: any) => {

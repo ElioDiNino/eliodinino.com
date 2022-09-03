@@ -41,15 +41,21 @@ function App() {
     query: '(min-width: ' + mobileSize + 'px)'
   })
 
+  const layout = {
+    hideHeaderPaths: ['/links'],
+    hideFooterPaths: ['/links'],
+    isMobile: isMobile
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
         {/* Hide the footer and header on the links page */}
-        <Route element={<Layout hideHeaderPaths={['/links']} hideFooterPaths={['/links']} />}>
+        <Route element={<Layout layout={layout} />}>
           <Route path="/" element={<HomePage isMobile={isMobile} isDesktopOrLaptopOrTablet={isDesktopOrLaptopOrTablet} />} />
           <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="/links" element={<LinksPage pageTitle="Links" siteTitle={siteTitle} />} />
+          <Route path="/links" element={<LinksPage pageTitle="Links" siteTitle={siteTitle} isMobile={isMobile} />} />
           <Route path="/contact" element={<ContactPage pageTitle="Contact" siteTitle={siteTitle} isMobile={isMobile} isDesktopOrLaptopOrTablet={isDesktopOrLaptopOrTablet} />} />
           {/* 404 Page */}
           <Route path="*" element={<NoPage pageTitle="404" siteTitle={siteTitle} />} />

@@ -2,26 +2,36 @@ import * as React from "react";
 import { Box, Button, ButtonGroup, Paper, Typography } from "@mui/material";
 // @ts-ignore
 import TypeIt from "typeit-react";
+import { Picture } from "../../components/Picture";
 import DescriptionIcon from '@mui/icons-material/Description';
 import LinkIcon from '@mui/icons-material/Link'
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import profile from '../../images/profile.jpg';
 // @ts-ignore
 import resume from '../../documents/Resume.pdf';
 import './HomePage.css';
 
 const HomePage = (props: any) => {
     // Properties depending on screen width
-    var paperWidth: string = props.isMobile ? paperWidth = "90%" : paperWidth = "80%";
-    var profileWidth: string = props.isMobile ? profileWidth = "200px" : profileWidth = "250px";
+    var paperWidth: string
+    var profileWidth: string
+    paperWidth = props.isMobile ? paperWidth = "90%" : paperWidth = "80%";
+    profileWidth = props.isMobile ? profileWidth = "200px" : profileWidth = "250px";
+
+    const profile = {
+        image: "profile",
+        imageWidth: profileWidth,
+        className: "homeProfile",
+        imageSizeMobile: "calc(100vw * 0.6)",
+        imageSizeNormal: "calc(100vw * 0.4)",
+        altText: "Head shot of Elio smiling with a blurred background",
+        isMobile: props.isMobile
+    };
 
     return <>
         <div className="homeBackground">
             <Box sx={{ pb: 20 }}>
-                <picture>
-                    <img className="homeProfile" src={profile} alt="Profile" width={profileWidth} />
-                </picture>
+                <Picture picture={profile} />
                 {props.isDesktopOrLaptopOrTablet &&
                     <Typography variant="h2" sx={{ mb: 2, mt: 4 }}>
                         Hi there! I'm Elio Di Nino

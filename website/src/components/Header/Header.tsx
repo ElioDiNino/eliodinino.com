@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Slide, AppBar, Box, Divider, Drawer, Typography, Button, Toolbar, List, ListItem, ListItemText, ListItemButton, useScrollTrigger, Fade, Fab } from "@mui/material";
+import { Picture } from "../../components/Picture";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import './Header.css';
-import logo from '../../images/logo.png';
 
 // Custom interfaces
 interface SubProps {
@@ -14,6 +14,7 @@ interface SubProps {
 
 interface MainProps {
     window?: () => Window;
+    isMobile: boolean;
 }
 
 const drawerWidth = 240;
@@ -21,6 +22,7 @@ const drawerWidth = 240;
 const navItems = ['Home', 'Links', 'Contact'];
 
 // Hide the header upon scrolling
+// eslint-disable-next-line
 function HideOnScroll(props: SubProps) {
     const { children } = props;
     const trigger = useScrollTrigger();
@@ -87,11 +89,22 @@ export default function Header(props: MainProps) {
         setMobileOpen(!mobileOpen);
     };
 
+    const logo = {
+        image: "logo",
+        imageWidth: "108px",
+        imageHeight: "37px",
+        className: "",
+        imageSizeMobile: "",
+        imageSizeNormal: "",
+        altText: "Site logo which is Elio Di Nino in cursive",
+        isMobile: props.isMobile
+    };
+
     // Mobile drawer component
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h2" sx={{ mt: 4, mb: 2 }}>
-                <a href="/"><img src={logo} alt="Site logo (mobile drawer)" width='108px' height='37px' /></a>
+                <a href="/"><Picture picture={logo} /></a>
             </Typography>
             <Divider />
             <List>
@@ -130,7 +143,7 @@ export default function Header(props: MainProps) {
                             component="div"
                             sx={{ flexGrow: 1, textAlign: 'center', display: { sm: 'none' } }}
                         >
-                            <a href="/"><img src={logo} alt="Site logo" width='108px' height='37px' /></a>
+                            <a href="/"><Picture picture={logo} /></a>
                         </Typography>
                         <IconButton
                             color="inherit"
@@ -145,7 +158,7 @@ export default function Header(props: MainProps) {
                             component="div"
                             sx={{ flexGrow: 1, textAlign: 'left', display: { xs: 'none', sm: 'block' } }}
                         >
-                            <a href="/"><img src={logo} alt="Site logo" width='108px' height='37px' /></a>
+                            <a href="/"><Picture picture={logo} /></a>
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {navItems.map((item) => (

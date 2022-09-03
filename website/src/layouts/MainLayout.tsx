@@ -2,14 +2,15 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Header from "../components/Header/Header";
 import Footer from '../components/Footer';
 
-const Layout = ({ hideHeaderPaths = ['/links'], hideFooterPaths = ['/links'] }) => {
+const Layout = (props: any) => {
     const { pathname } = useLocation();
+    const layout = props.layout;
 
     return (
         <>
-            {!hideHeaderPaths.includes(pathname) && <Header />}
+            {!layout.hideHeaderPaths.includes(pathname) && <Header isMobile={layout.isMobile} />}
             <Outlet />
-            {!hideFooterPaths.includes(pathname) && <Footer />}
+            {!layout.hideFooterPaths.includes(pathname) && <Footer />}
         </>
     );
 }
