@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /404.html
+
+Sitemap: https://eliodinino.com/sitemap.xml
