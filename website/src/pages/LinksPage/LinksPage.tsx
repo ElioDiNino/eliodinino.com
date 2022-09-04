@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IconButton, Button } from "@mui/material";
+import { IconButton, Button, Paper } from "@mui/material";
 import { Picture } from "../../components/Picture";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -14,9 +14,16 @@ import gitlab from '../../images/gitlab-logo.svg';
 const LinksPage = (props: any) => {
     // Update browser title
     document.title = props.pageTitle + " - " + props.siteTitle;
+    // Properties depending on screen width
+    var paperWidthMax: string;
+    var imageSize: string;
+    paperWidthMax = props.isMobile ? paperWidthMax = "calc(100vw * 0.9)" : paperWidthMax = "500px";
+    imageSize = props.isMobile ? imageSize = "50%" : imageSize = "40%";
+
     const profile = {
         image: "profile",
-        imageWidth: "40%",
+        imageWidth: imageSize,
+        imageHeight: imageSize,
         className: "profile",
         imageSizeMobile: "calc(100vw * 0.9 * 0.4)",
         imageSizeNormal: "calc(100vw * 0.4)",
@@ -26,7 +33,7 @@ const LinksPage = (props: any) => {
 
     return <>
         <div className="background">
-            <div className="frostedGlass">
+            <Paper className="frostedGlass" sx={{ width: "100%", maxWidth: paperWidthMax, height: "auto", margin: "auto", boxShadow: "0 0 1rem 0 rgba(0, 0, 0, .2)", borderRadius: "20px", backgroundColor: "rgba(255, 255, 255, .15)", backdropFilter: "blur(5px)", padding: "3rem 1rem" }}>
                 <Picture className="profile" picture={profile} />
                 <br />
                 <h1>Elio Di Nino</h1>
@@ -53,7 +60,7 @@ const LinksPage = (props: any) => {
                 <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
                     <InstagramIcon />
                 </IconButton>
-            </div>
+            </Paper>
         </div>
     </>
 }
