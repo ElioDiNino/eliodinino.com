@@ -3,11 +3,6 @@
     "short_name": "Elio Di Nino",
     "icons": [
         {
-            "src": "favicon.ico",
-            "sizes": "64x64",
-            "type": "image/x-icon"
-        },
-        {
             "src": "/android-chrome-36x36.png",
             "sizes": "36x36",
             "type": "image/png"
@@ -53,7 +48,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": ".",
+    "start_url": "/",
     "theme_color": "#cbfcff",
     "background_color": "#cbfcff",
     "display": "standalone"
