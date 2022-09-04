@@ -26,6 +26,9 @@ let theme = createTheme({
   typography: {
     button: {
       textTransform: 'none'
+    },
+    h1: {
+      fontSize: '3.8rem',
     }
   },
 });
