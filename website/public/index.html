@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="The personal website of Elio Di Nino. Check out my projects and contact me!" />
@@ -19,12 +19,11 @@
     {
       "@context": "http://schema.org/",
       "@type": "Organization",
-      "url": "%PUBLIC_URL%",
-      "logo": "%PUBLIC_URL%/site-logo.png"
+      "url": "https://eliodinino.com",
+      "logo": "https://eliodinino.com/site-logo.png"
     }
     </script>
 
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <meta name="apple-mobile-web-app-title" content="Elio Di Nino">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#cbfcff">
@@ -50,6 +49,7 @@
   <meta name="msapplication-TileColor" content="#cbfcff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
   <meta name="DC.title" content="Elio Di Nino" />
@@ -58,21 +58,21 @@
   <meta name="geo.position" content="49;-123" />
   <meta name="ICBM" content="49, -123" />
 
-  <meta property="og:url" content="%PUBLIC_URL%">
+  <meta property="og:url" content="https://eliodinino.com">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Elio Di Nino">
-  <meta property="og:image" content="%PUBLIC_URL%/social-share.png">
+  <meta property="og:image" content="https://eliodinino.com/social-share.png">
   <meta property="og:image:alt" content="A banner logo for Elio Di Nino's website">
   <meta property="og:description" content="The personal website of Elio Di Nino. Check out my projects and contact me!">
   <meta property="og:site_name" content="Site Name">
   <meta property="og:locale" content="en_CA">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="%PUBLIC_URL%">
+  <meta name="twitter:url" content="https://eliodinino.com">
   <meta name="twitter:title" content="Elio Di Nino">
   <meta name="twitter:description"
     content="The personal website of Elio Di Nino. Check out my projects and contact me!">
-  <meta name="twitter:image" content="%PUBLIC_URL%/social-share.png">
+  <meta name="twitter:image" content="https://eliodinino.com/social-share.png">
   <meta name="twitter:image:alt" content="A banner logo for Elio Di Nino's website">
   <meta name="twitter:dnt" content="on">
 
@@ -80,13 +80,6 @@
     // Single Page Apps for GitHub Pages
     // MIT License
     // https://github.com/rafgraph/spa-github-pages
-    // This script checks to see if a redirect is present in the query string,
-    // converts it back into the correct url and adds it to the
-    // browser's history using window.history.replaceState(...),
-    // which won't cause the browser to attempt to load the new url.
-    // When the single page app is loaded further down in this file,
-    // the correct url will be waiting in the browser's history for
-    // the single page app to route accordingly.
     (function (l) {
       if (l.search[1] === '/') {
         var decoded = l.search.slice(1).split('&').map(function (s) {
@@ -106,6 +99,12 @@
     gtag('js', new Date());
 
     gtag('config', 'G-Z8SQBEWTM6');
+  </script>
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   </script>
 </head>
 
