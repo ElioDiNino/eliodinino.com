@@ -141,6 +141,7 @@ export default function Header(props: MainProps) {
                         <Typography
                             variant="h1"
                             component="div"
+                            fontSize="3.5rem"
                             sx={{ flexGrow: 1, textAlign: 'center', display: { sm: 'none' } }}
                         >
                             <a href="/"><Picture picture={logo} /></a>
