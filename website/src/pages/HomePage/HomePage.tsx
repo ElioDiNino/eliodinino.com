@@ -8,7 +8,6 @@ import LinkIcon from '@mui/icons-material/Link'
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 // @ts-ignore
-import resume from '../../documents/Resume.pdf';
 import './HomePage.css';
 
 const HomePage = (props: any) => {
@@ -21,6 +20,7 @@ const HomePage = (props: any) => {
     const profile = {
         image: "profile",
         imageWidth: profileWidth,
+        imageHeight: profileWidth,
         className: "homeProfile",
         imageSizeMobile: "calc(100vw * 0.6)",
         imageSizeNormal: "calc(100vw * 0.4)",
@@ -33,11 +33,11 @@ const HomePage = (props: any) => {
             <Box sx={{ pb: 20 }}>
                 <Picture picture={profile} />
                 {props.isDesktopOrLaptopOrTablet &&
-                    <Typography variant="h2" sx={{ mb: 2, mt: 4 }}>
+                    <Typography variant="h1" sx={{ mb: 2, mt: 4 }}>
                         Hi there! I'm Elio Di Nino
                     </Typography>}
                 {props.isMobile &&
-                    <Typography variant="h2" sx={{ mb: 2, mt: 4 }}>
+                    <Typography variant="h1" sx={{ mb: 2, mt: 4 }}>
                         Hi, I'm Elio Di Nino!
                     </Typography>}
                 <Typography variant="h4" sx={{ my: 1 }}>
@@ -51,6 +51,10 @@ const HomePage = (props: any) => {
                         }}
                         getBeforeInit={(instance: any) => {
                             instance
+                                .type("Engineering Student")
+                                .pause(2000)
+                                .delete()
+                                .pause(1000)
                                 .type("Software Developer")
                                 .pause(2000)
                                 .delete()
@@ -68,7 +72,7 @@ const HomePage = (props: any) => {
                     />
                 </Typography>
                 <ButtonGroup sx={{ mx: "auto", my: 3 }}>
-                    <Button variant="contained" href={resume} size="large" startIcon={<DescriptionIcon />}>Resume</Button>
+                    <Button variant="contained" href="/Resume.pdf" size="large" startIcon={<DescriptionIcon />}>Resume</Button>
                     <Button variant="contained" href="/links" size="large" endIcon={<LinkIcon />} >Links</Button>
                 </ButtonGroup>
                 <Paper sx={{ width: paperWidth, mx: "auto", px: 6, py: 4, my: 4, maxWidth: 1100, borderRadius: 4 }}>

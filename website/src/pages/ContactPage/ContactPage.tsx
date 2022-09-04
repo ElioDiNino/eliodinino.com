@@ -52,7 +52,7 @@ const ContactPage = (props: any) => {
     };
 
     return (
-        <Box sx={{ verticalAlign: 'middle', pb: 20 }}>
+        <Box sx={{ verticalAlign: 'middle', pb: 24 }}>
             <Paper className="contact" sx={{ width: "fit-content", maxWidth: "90%", p: formPad, borderRadius: 10, mx: "auto" }}>
                 <Typography variant="h4" sx={{ mb: 3 }}>Contact</Typography>
                 <form ref={form} onSubmit={sendEmail}>
