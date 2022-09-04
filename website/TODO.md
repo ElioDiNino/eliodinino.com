@@ -1,6 +1,6 @@
 - Contact form submit message
 - Home page about fade in
-- Upload resume
+- Upload resume (after Sept 11th)
 
 - Look at report web vitals
 
