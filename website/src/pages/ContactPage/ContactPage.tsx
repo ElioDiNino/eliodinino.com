@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Paper, Typography, TextField, Button } from "@mui/material";
+import { Box, Paper, Typography, TextField, Button, Alert, Snackbar } from "@mui/material";
 // https://www.emailjs.com/docs/sdk/installation/
 import emailjs from '@emailjs/browser';
 // https://www.npmjs.com/package/@matt-block/react-recaptcha-v2
@@ -19,6 +19,9 @@ const ContactPage = (props: any) => {
     // eslint-disable-next-line
     const [theme, setTheme] = React.useState("dark");
     const [key, setKey] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
+    const [alertMessage, setAlertMessage] = React.useState("");
+    const [alertType, setAlertType] = React.useState<"error" | "success">("error");
 
     // Pick captcha size based on screen size
     // eslint-disable-next-line
@@ -45,9 +48,18 @@ const ContactPage = (props: any) => {
                 setName("");
                 setEmail("");
                 setMessage("");
+                setCaptchaResult(false);
+                setAlertType("success");
+                setAlertMessage("Thank you for submitting!");
+                setOpen(true);
                 setKey(key + 1);
             }, (error: any) => {
                 console.log(error.text);
+                setAlertType("error");
+                setAlertMessage("There was an error submitting your message. Please try again.");
+                setOpen(true);
+                setCaptchaResult(false);
+                setKey(key + 1);
             });
     };
 
@@ -55,6 +67,9 @@ const ContactPage = (props: any) => {
         <Box sx={{ verticalAlign: 'middle', pb: 24 }}>
             <Paper className="contact" sx={{ width: "fit-content", maxWidth: "90%", p: formPad, borderRadius: 10, mx: "auto" }}>
                 <Typography variant="h4" sx={{ mb: 3 }}>Contact</Typography>
+                <Snackbar anchorOrigin={{ vertical: "bottom", horizontal: "center" }} open={open} key={key} autoHideDuration={6000} onClose={() => { setKey(key + 1); setOpen(false); }}>
+                    <Alert severity={alertType} sx={{ mb: 3 }}>{alertMessage}</Alert>
+                </Snackbar>
                 <form ref={form} onSubmit={sendEmail}>
                     {props.isDesktopOrLaptopOrTablet &&
                         <TextField
