@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Button, ButtonGroup, Paper, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Divider, Paper, Typography } from "@mui/material";
 // @ts-ignore
 import TypeIt from "typeit-react";
 import { Picture } from "../../components/Picture";
@@ -92,6 +92,7 @@ const HomePage = (props: any) => {
                     <Typography variant="body1" align="left">
                         I hope to use my current and future skills to pursue a career in the Computer Engineering field. To get there I am looking to try many different roles through co-ops and volunteering opportunities at UBC. Following this, I will seek a career that I am passionate about and one that makes a positive impact on the world.
                     </Typography>
+                    <Divider sx={{ my: 4, borderBottomWidth: 1.5, color: "#ffffff", borderColor: "#ffffff" }} />
                     <Typography variant="h4" sx={{ mt: 3, mb: 2 }}>Projects</Typography>
                     <Typography variant="body1" align="center" sx={{ mb: 2 }}>
                         Check out my GitHub to see what I am working on!

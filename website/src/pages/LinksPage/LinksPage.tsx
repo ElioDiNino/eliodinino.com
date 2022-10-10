@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WebIcon from '@mui/icons-material/Web';
 import EmailIcon from '@mui/icons-material/Email';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 import './LinksPage.css';
 import gitlab from '../../images/gitlab-logo.svg';
@@ -47,18 +48,23 @@ const LinksPage = (props: any) => {
                 <Button variant="contained" sx={{ m: 1, backgroundColor: '#47a7d4', color: '#ffffff', '&:hover': { backgroundColor: '#357ea1' } }} startIcon={<PhotoCameraIcon />} href="https://photography.eliodinino.com" target="blank">
                     Photography Portfolio
                 </Button>
-                <h4>Profiles</h4>
+                <br />
+                <Button variant="contained" sx={{ m: 1, backgroundColor: '#47a7d4', color: '#ffffff', '&:hover': { backgroundColor: '#357ea1' } }} startIcon={<DescriptionIcon />} href="/Resume.pdf">
+                    Resume
+                </Button>
+                {/* <br /> */}
+                <h3>Profiles</h3>
                 <IconButton href="https://www.linkedin.com/in/eliodinino/" target="blank">
-                    <LinkedInIcon />
+                    <LinkedInIcon fontSize="large" />
                 </IconButton>
                 <IconButton href="https://github.com/ElioDiNino/" target="blank">
-                    <GitHubIcon />
+                    <GitHubIcon fontSize="large" />
                 </IconButton>
                 <IconButton href="https://gitlab.com/ElioDiNino/" target="blank">
-                    <img src={gitlab} alt="GitLab" width="22" height="22" />
+                    <img src={gitlab} alt="GitLab" width="32" height="32" />
                 </IconButton>
                 <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
-                    <InstagramIcon />
+                    <InstagramIcon fontSize="large" />
                 </IconButton>
             </Paper>
         </div>
