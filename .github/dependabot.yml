@@ -7,7 +7,6 @@ updates:
     directory: "/website"
     schedule:
       interval: "weekly"
-    insecure-external-code-execution: deny
     labels:
       - "Dependencies"
     open-pull-requests-limit: 10
