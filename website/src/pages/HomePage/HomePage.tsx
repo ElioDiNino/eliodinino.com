@@ -44,7 +44,7 @@ const HomePage = (props: any) => {
                     <TypeIt
                         options={{
                             speed: 100,
-                            lifelike: true,
+                            lifeLike: true,
                             cursor: true,
                             cursorSpeed: 500,
                             loop: true
