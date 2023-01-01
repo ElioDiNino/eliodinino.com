@@ -17,7 +17,7 @@ export default function Footer() {
                 <EmailIcon fontSize="inherit" />
             </IconButton>
             <br />
-            <Typography sx={{ p: 1 }}>&copy; 2022 Elio Di Nino</Typography>
+            <Typography sx={{ p: 1 }}>&copy; 2023 Elio Di Nino</Typography>
         </Paper>
     </>
 }
