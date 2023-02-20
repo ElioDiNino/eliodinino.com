@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "@emotion/react": "^11.10.5",
+    "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@matt-block/react-recaptcha-v2": "^1.0.8",
     "@mui/icons-material": "^5.11.0",
