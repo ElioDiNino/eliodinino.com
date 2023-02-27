@@ -16,7 +16,7 @@
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@matt-block/react-recaptcha-v2": "^1.0.8",
+    "@matt-block/react-recaptcha-v2": "^1.0.9",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@testing-library/jest-dom": "^5.16.4",
