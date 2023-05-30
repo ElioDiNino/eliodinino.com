@@ -1,11 +1,9 @@
 import * as React from "react";
 import { Slide, AppBar, Box, Divider, Drawer, Typography, Button, Toolbar, List, ListItem, ListItemText, ListItemButton, useScrollTrigger, Fade, Fab } from "@mui/material";
-import { Picture } from "../../components/Picture";
+import { Picture } from "./Picture";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-
-import './Header.css';
 
 // Custom interfaces
 interface SubProps {
@@ -131,7 +129,7 @@ export default function Header(props: MainProps) {
                         {/* Mobile drawer handle */}
                         <IconButton
                             color="inherit"
-                            aria-label="open drawer"
+                            aria-label="Open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
                             sx={{ mr: 2, display: { sm: 'none' } }}
@@ -149,6 +147,7 @@ export default function Header(props: MainProps) {
                         <IconButton
                             color="inherit"
                             edge="start"
+                            aria-label="Spacer"
                             disabled={true}
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >

@@ -60,12 +60,12 @@ const LinksPage = (props: any) => {
                 <IconButton href="https://github.com/ElioDiNino/" target="blank">
                     <GitHubIcon fontSize="large" />
                 </IconButton>
-                <IconButton href="https://gitlab.com/ElioDiNino/" target="blank">
-                    <img src={gitlab} alt="GitLab" width="32" height="32" />
-                </IconButton>
                 <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
                     <InstagramIcon fontSize="large" />
                 </IconButton>
+                <IconButton href="https://gitlab.com/ElioDiNino/" target="blank">
+                    <img src={gitlab} alt="GitLab" width="32" height="32" />
+                </IconButton> 
             </Paper>
         </div>
     </>

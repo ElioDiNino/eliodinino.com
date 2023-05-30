@@ -1,0 +1,54 @@
+[[plugins]]
+  package = "netlify-plugin-visual-diff"
+  
+  [plugins.inputs]
+    # https://github.com/applitools/netlify-plugin-visual-diff
+    
+    serverUrl = "https://eyesapi.applitools.com"
+    ignoreSelector = "#copyright"
+    failBuildOnDiff = false
+    concurrency = 5
+
+    [[plugins.inputs.browser]]
+      name = "chrome"
+      width = 3840
+      height = 2160
+
+    [[plugins.inputs.browser]]
+      name = "chrome"
+      width = 1024
+      height = 768
+
+    [[plugins.inputs.browser]]
+      name = "firefox"
+      width = 1920
+      height = 1080
+
+    [[plugins.inputs.browser]]
+      name = "safari"
+      width = 1920
+      height = 1080
+
+    [[plugins.inputs.browser]]
+     deviceName = "Galaxy S22"
+   
+    [[plugins.inputs.browser]]
+     deviceName = "iPhone 11"
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+
+	[plugins.inputs]
+  # https://github.com/cdeleeuwe/netlify-plugin-submit-sitemap
+
+	# Path to the sitemap URL (optional, default = /sitemap.xml)
+	sitemapPath = "/sitemap.xml"
+
+	# Time in seconds to not submit the sitemap after successful submission
+	ignorePeriod = 0
+
+	# Enabled providers to submit sitemap to (optional, default = 'google', 'yandex'). Possible providers are currently only 'google', 'yandex'.
+	providers = [
+		"google",
+		"yandex"
+	]

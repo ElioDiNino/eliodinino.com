@@ -7,17 +7,17 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function Footer() {
     return <>
         <Paper sx={{ borderRadius: 0, pt: 3, pb: 2, position: "absolute", left: 0, right: 0, bottom: 0 }}>
-            <IconButton href="https://www.linkedin.com/in/eliodinino/" target="blank" size="large">
+            <IconButton href="https://www.linkedin.com/in/eliodinino/" aria-label="LinkedIn" target="blank" size="large">
                 <LinkedInIcon fontSize="inherit" />
             </IconButton>
-            <IconButton href="https://github.com/ElioDiNino/" target="blank" size="large">
+            <IconButton href="https://github.com/ElioDiNino/" aria-label="GitHub" target="blank" size="large">
                 <GitHubIcon fontSize="inherit" />
             </IconButton>
-            <IconButton href="/contact" size="large">
+            <IconButton href="/contact" aria-label="Contact" size="large">
                 <EmailIcon fontSize="inherit" />
             </IconButton>
             <br />
-            <Typography sx={{ p: 1 }}>&copy; 2023 Elio Di Nino</Typography>
+            <Typography id="copyright" sx={{ p: 1 }}>&copy; 2023 Elio Di Nino</Typography>
         </Paper>
     </>
 }
