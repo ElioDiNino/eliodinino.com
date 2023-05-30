@@ -1,5 +1,6 @@
 [[plugins]]
   package = "netlify-plugin-visual-diff"
+  
   [plugins.inputs]
     # https://github.com/applitools/netlify-plugin-visual-diff
     
