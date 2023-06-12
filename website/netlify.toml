@@ -4,8 +4,9 @@
   [plugins.inputs]
     # https://github.com/applitools/netlify-plugin-visual-diff
     
+    serverUrl = "https://eyes.applitools.com"
     ignoreSelector = "#copyright"
-    failBuildOnDiff = false
+    failBuildOnDiff = true
     concurrency = 5
 
     [[plugins.inputs.browser]]
