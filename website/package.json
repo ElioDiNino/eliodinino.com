@@ -9,7 +9,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "serve -s build",
-    "test": "react-scripts test",
+    "test": "cypress run",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -52,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@applitools/eyes-cypress": "^3.33.1",
+    "cypress": "^12.14.0"
   }
 }

@@ -1,41 +1,4 @@
 [[plugins]]
-  package = "netlify-plugin-visual-diff"
-  
-  [plugins.inputs]
-    # https://github.com/applitools/netlify-plugin-visual-diff
-    
-    serverUrl = "https://eyesapi.applitools.com"
-    ignoreSelector = "#copyright"
-    failBuildOnDiff = false
-    concurrency = 5
-
-    [[plugins.inputs.browser]]
-      name = "chrome"
-      width = 3840
-      height = 2160
-
-    [[plugins.inputs.browser]]
-      name = "chrome"
-      width = 1024
-      height = 768
-
-    [[plugins.inputs.browser]]
-      name = "firefox"
-      width = 1920
-      height = 1080
-
-    [[plugins.inputs.browser]]
-      name = "safari"
-      width = 1920
-      height = 1080
-
-    [[plugins.inputs.browser]]
-     deviceName = "Galaxy S22"
-   
-    [[plugins.inputs.browser]]
-     deviceName = "iPhone 11"
-
-[[plugins]]
   package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
