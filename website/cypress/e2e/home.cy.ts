@@ -2,7 +2,7 @@
 
 describe('Home Page', () => {
     beforeEach(() => {
-        cy.visit('https://eliodinino.com/')
+        cy.visit('/')
 
         cy.eyesOpen({
             // The name of the application under test

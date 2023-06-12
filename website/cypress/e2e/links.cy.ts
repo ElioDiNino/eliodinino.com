@@ -2,7 +2,7 @@
 
 describe('Links Page', () => {
     beforeEach(() => {
-        cy.visit('https://eliodinino.com/links')
+        cy.visit('/links')
 
         cy.eyesOpen({
             // The name of the application under test
