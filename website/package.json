@@ -54,7 +54,6 @@
   },
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.33.1",
-    "cypress": "^12.14.0",
-    "netlify-plugin-visual-diff": "^2.0.0"
+    "cypress": "^12.14.0"
   }
 }
