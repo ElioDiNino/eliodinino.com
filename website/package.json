@@ -17,13 +17,13 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@matt-block/react-recaptcha-v2": "^2.0.1",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.6",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.1",
     "@types/jest": "^29.5.2",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "react": "^18.2.0",
@@ -32,7 +32,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "typeit-react": "^2.6.4",
-    "typescript": "^4.9.5",
+    "typescript": "^5.1.6",
     "web-vitals": "^3.3.2"
   },
   "eslintConfig": {
@@ -54,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.34.0",
-    "cypress": "^12.16.0"
+    "@applitools/eyes-cypress": "^3.34.1",
+    "cypress": "^12.17.0"
   }
 }
