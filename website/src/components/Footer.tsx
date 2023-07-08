@@ -17,7 +17,7 @@ export default function Footer() {
                 <EmailIcon fontSize="inherit" />
             </IconButton>
             <br />
-            <Typography id="copyright" sx={{ p: 1 }}>&copy; 2023 Elio Di Nino</Typography>
+            <Typography id="copyright" sx={{ p: 1 }}>&copy; {new Date().getFullYear()} Elio Di Nino</Typography>
         </Paper>
     </>
 }
