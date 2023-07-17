@@ -17,15 +17,15 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@matt-block/react-recaptcha-v2": "^2.0.1",
-    "@mui/icons-material": "^5.13.7",
-    "@mui/material": "^5.13.7",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.1",
-    "@types/jest": "^29.5.2",
-    "@types/node": "^20.4.1",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-responsive": "^9.0.2",
@@ -33,7 +33,7 @@
     "react-scripts": "5.0.1",
     "typeit-react": "^2.6.4",
     "typescript": "^4.9.5",
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^3.4.0"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +55,6 @@
   },
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.34.1",
-    "cypress": "^12.17.0"
+    "cypress": "^12.17.1"
   }
 }
