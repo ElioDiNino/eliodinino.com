@@ -10,7 +10,6 @@ import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import DescriptionIcon from '@mui/icons-material/Description';
 
 import './LinksPage.css';
-import gitlab from '../../images/gitlab-logo.svg';
 
 const LinksPage = (props: any) => {
     // Update browser title
@@ -63,9 +62,6 @@ const LinksPage = (props: any) => {
                 <IconButton href="https://www.instagram.com/eliodinino/" target="blank">
                     <InstagramIcon fontSize="large" />
                 </IconButton>
-                <IconButton href="https://gitlab.com/ElioDiNino/" target="blank">
-                    <img src={gitlab} alt="GitLab" width="32" height="32" />
-                </IconButton> 
             </Paper>
         </div>
     </>
