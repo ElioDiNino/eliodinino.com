@@ -78,19 +78,19 @@ const HomePage = (props: any) => {
                 <Paper sx={{ width: paperWidth, mx: "auto", px: 6, py: 4, my: 4, maxWidth: 1100, borderRadius: 4 }}>
                     <Typography variant="h4" sx={{ mb: 2 }}>About Me</Typography>
                     <Typography variant="body1" align="left">
-                        I am a driven UBC Computer Engineering student interested in computer hardware and software. In my free time, I enjoy pursuing personal programming projects, cycling, playing soccer, learning about new technologies and <a href="https://photography.eliodinino.com" target="_blank" rel="noreferrer">taking landscape photos</a>.
+                        I am a driven UBC Computer Engineering student passionate about software development and technology. I have an abundance of experience working in teams to solve challenges with innovative software solutions, ranging from quantum computing pipelines to autonomous aircraft systems.
                     </Typography><br />
                     <Typography variant="body1" align="left">
-                        One of my values is to always continue learning. To uphold this, I pursue projects that require me to learn new skills and I seek new experiences, often outside of my comfort zone. I also look to meet new people and challenge myself whenever I can. I believe that this continuous learning and seeking of challenges is important to my growth and adaptability.
+                        In my free time, I enjoy pursuing personal programming projects, cycling, playing soccer, flying drones, learning about new technologies, and <a href="https://photography.eliodinino.com" target="_blank" rel="noreferrer">taking landscape photos</a>. Within the university, I contribute as a Teaching Assistant and lead a team of 70 students on <a href="https://ubcuas.com" target="_blank" rel="noreferrer">UBC Uncrewed Aircraft Systems</a>.
                     </Typography><br />
                     <Typography variant="body1" align="left">
-                        My hard-working nature and natural leadership skills make me a valuable team member who can both listen and lead if needed. Furthermore, my attention to detail and organizational skills contribute to the timely completion of high-quality deliverables. As a result of these core attributes, along with my past experiences, I was awarded full-ride scholarships to both UBC and McMaster University.
+                        My commitment to learning drives me to take on projects that require gaining new skills and pursuing challenges outside my comfort zone. I believe that continuous learning and embracing new experiences are pivotal to personal growth and adaptability.
                     </Typography><br />
                     <Typography variant="h5" align="left">
                         🎯 Professional Goal
                     </Typography><br />
                     <Typography variant="body1" align="left">
-                        I plan to use my current and future skills to pursue a career in the Computer Engineering field. To get there I am trying many different roles through co-ops and volunteering opportunities at UBC. Following this, I will seek a career that I am passionate about and one that makes a positive impact on the world.
+                        I'm on a mission to build impactful technologies through scalable software, courageous innovation, and ambitious leadership while relentlessly pursuing my passion for contributing to technology to better society.
                     </Typography>
                     <Divider sx={{ my: 4, borderBottomWidth: 1.5, color: "#ffffff", borderColor: "#ffffff" }} />
                     <Typography variant="h4" sx={{ mt: 3, mb: 2 }}>Projects</Typography>
