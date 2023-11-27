@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Box, Button, ButtonGroup, Divider, Paper, Typography } from "@mui/material";
-// @ts-ignore
 import TypeIt from "typeit-react";
 import { Picture } from "../../components/Picture";
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -12,10 +11,10 @@ import './HomePage.css';
 
 const HomePage = (props: any) => {
     // Properties depending on screen width
-    var paperWidth: string
-    var profileWidth: string
-    paperWidth = props.isMobile ? paperWidth = "90%" : paperWidth = "80%";
-    profileWidth = props.isMobile ? profileWidth = "200px" : profileWidth = "250px";
+    let paperWidth: string;
+    let profileWidth: string;
+    paperWidth = props.isMobile ? "90%" : "80%";
+    profileWidth = props.isMobile ? "200px" : "250px";
 
     const profile = {
         image: "profile",
@@ -45,11 +44,10 @@ const HomePage = (props: any) => {
                         options={{
                             speed: 100,
                             lifeLike: true,
-                            cursor: true,
-                            cursorSpeed: 500,
+                            cursorSpeed: 600,
                             loop: true
                         }}
-                        getBeforeInit={(instance: any) => {
+                        getBeforeInit={(instance) => {
                             instance
                                 .type("Engineering Student")
                                 .pause(2000)
