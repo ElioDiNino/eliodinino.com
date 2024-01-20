@@ -5,6 +5,7 @@
   "description": "Elio Di Nino's personal website",
   "author": "Elio Di Nino",
   "homepage": "https://eliodinino.com",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
