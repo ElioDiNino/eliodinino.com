@@ -7,6 +7,8 @@
     preload'''
     X-Frame-Options = "DENY"
     X-XSS-Protection = "0"
+    X-Content-Type-Options = "nosniff"
+
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
