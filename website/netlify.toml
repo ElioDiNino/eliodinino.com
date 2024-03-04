@@ -5,6 +5,7 @@
     max-age=63072000;
     includeSubDomains;
     preload'''
+    X-Frame-Options = "DENY"
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
