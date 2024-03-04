@@ -6,6 +6,7 @@
     includeSubDomains;
     preload'''
     X-Frame-Options = "DENY"
+    X-XSS-Protection = "0"
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
