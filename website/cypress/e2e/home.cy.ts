@@ -5,10 +5,7 @@ describe('Home Page', () => {
         cy.visit('/')
 
         cy.eyesOpen({
-            // The name of the application under test
             appName: 'Personal Website',
-            
-            // The name of the test case for the given application
             testName: Cypress.currentTest.title,
         })
     })
@@ -27,7 +24,6 @@ describe('Home Page', () => {
     })
 
     afterEach(() => {
-        // Close Eyes to tell the server it should display the results
         cy.eyesClose()
     })
 })
