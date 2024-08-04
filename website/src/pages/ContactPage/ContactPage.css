@@ -1,8 +1,8 @@
 /* Google reCaptcha formatting */
 #captcha {
-    text-align: center;
+  text-align: center;
 }
 
 .g-recaptcha {
-    display: inline-block;
+  display: inline-block;
 }
