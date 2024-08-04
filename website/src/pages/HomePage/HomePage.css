@@ -1,11 +1,11 @@
 .homeBackground {
-    display: grid;
+  display: grid;
 }
 
 .homeProfile {
-    border-radius: 20%;
+  border-radius: 7%;
 }
 
 .h2 {
-    margin-top: 20px;
+  margin-top: 20px;
 }

@@ -16,7 +16,21 @@ import profile1598avif from '../images/profile-1598.avif';
 import profile1065avif from '../images/profile-1065.avif';
 import profile799avif from '../images/profile-799.avif';
 
-export const Picture = (props: any) => {
+interface PictureProps {
+    picture: {
+        image: string,
+        imageSizeMobile: string,
+        imageSizeNormal: string,
+        className: string,
+        altText: string,
+        imageWidth: string,
+        imageHeight: string,
+        imageSize?: string,
+        isMobile: boolean
+    }
+}
+
+export const Picture = (props: PictureProps) => {
     const picture = props.picture;
 
     var imageSize: string

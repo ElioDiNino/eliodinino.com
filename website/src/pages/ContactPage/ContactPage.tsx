@@ -34,8 +34,7 @@ const ContactPage = (props: any) => {
     });
 
     // Form padding based on screen size
-    var formPad: number
-    formPad = props.isMobile ? formPad = 4 : formPad = 6;
+    var formPad = props.isMobile ? 4 : 6;
 
     // Form submit
     const sendEmail = (e: any) => {
@@ -65,7 +64,7 @@ const ContactPage = (props: any) => {
 
     return (
         <Box sx={{ verticalAlign: 'middle', pb: 24 }}>
-            <Paper className="contact" sx={{ width: "fit-content", maxWidth: "90%", p: formPad, borderRadius: 10, mx: "auto" }}>
+            <Paper className="contact" sx={{ width: "fit-content", maxWidth: "90%", p: formPad, borderRadius: 10, mx: "auto", mt: 4 }}>
                 <Typography variant="h4" sx={{ mb: 3 }}>Contact</Typography>
                 <Snackbar anchorOrigin={{ vertical: "bottom", horizontal: "center" }} open={open} key={key} autoHideDuration={6000} onClose={() => { setKey(key + 1); setOpen(false); }}>
                     <Alert severity={alertType} sx={{ mb: 3 }}>{alertMessage}</Alert>
