@@ -1,6 +1,6 @@
 {
   "name": "eliodinino.com",
-  "version": "3.0",
+  "version": "4.0",
   "private": true,
   "description": "Elio Di Nino's personal website",
   "author": "Elio Di Nino",
@@ -56,6 +56,7 @@
     "@applitools/eyes-cypress": "^3.44.6",
     "@vitejs/plugin-react": "^4.3.1",
     "cypress": "^13.13.1",
+    "prettier": "3.3.3",
     "vite": "^5.3.5",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.2"
