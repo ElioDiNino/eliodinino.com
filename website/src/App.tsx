@@ -16,7 +16,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 const siteTitle = "Elio Di Nino";
 
 // Specifying what size to consider mobile
-const mobileSize = 600;
+const mobileSize = 800;
 
 // Customized MUI theme
 let theme = createTheme({
@@ -28,8 +28,18 @@ let theme = createTheme({
       textTransform: 'none'
     },
     h1: {
-      fontSize: '3.8rem',
-    }
+      fontSize: '3rem',
+      fontFamily: '"Overpass Mono", monospace',
+      fontWeight: 500
+    },
+    h3: {
+      fontSize: '2.1rem',
+      fontWeight: 600
+    },
+    h4: {
+      fontFamily: '"Overpass Mono", monospace',
+      fontWeight: 600
+    },
   },
 });
 theme = responsiveFontSizes(theme);
@@ -41,7 +51,7 @@ function App() {
     query: '(max-width: ' + mobileSize + 'px)'
   })
   const isDesktopOrLaptopOrTablet = useMediaQuery({
-    query: '(min-width: ' + mobileSize + 'px)'
+    query: '(min-width: ' + (mobileSize + 1) + 'px)'
   })
 
   const layout = {
