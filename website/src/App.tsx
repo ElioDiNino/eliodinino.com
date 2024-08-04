@@ -28,6 +28,19 @@ let theme = createTheme({
     mode: 'dark',
   },
   typography: {
+    fontFamily: [
+      'Helvetica',
+      'Roboto',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+    ].join(','),
     button: {
       textTransform: 'none',
     },

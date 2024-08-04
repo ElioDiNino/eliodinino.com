@@ -212,7 +212,7 @@ export default function Header(props: MainProps) {
                   display: { xs: 'none', sm: 'block' },
                 }}
               >
-                <a href="/" style={{ fontSize: '60px'}}>
+                <a href="/" style={{ fontSize: '60px' }}>
                   <Picture picture={logo} />
                 </a>
               </Typography>
