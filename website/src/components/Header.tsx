@@ -181,7 +181,7 @@ export default function Header(props: MainProps) {
                 <MenuIcon />
               </IconButton>
               <Typography
-                variant="h1"
+                variant="h3"
                 component="div"
                 fontSize="3.5rem"
                 sx={{

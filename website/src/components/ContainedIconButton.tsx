@@ -5,6 +5,8 @@ import { Button } from '@mui/material';
 interface ContainedIconButtonProps {
   isMobile: boolean;
   link: string;
+  ml: number | undefined;
+  mr: number;
   startIcon: React.ReactNode;
 }
 
@@ -19,7 +21,8 @@ export const ContainedIconButton = (props: ContainedIconButtonProps) => {
       sx={{
         borderRadius: '8px',
         p: 0,
-        mr: 2,
+        ml: props.ml,
+        mr: props.mr,
         textAlign: 'center',
         minWidth: '48px',
         '& .MuiButton-startIcon': {

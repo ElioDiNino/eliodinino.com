@@ -98,7 +98,7 @@ const ContactPage = (props: any) => {
           mt: 4,
         }}
       >
-        <Typography variant="h4" sx={{ mb: 3 }}>
+        <Typography variant="h2" sx={{ mb: 3 }}>
           Contact
         </Typography>
         <Snackbar

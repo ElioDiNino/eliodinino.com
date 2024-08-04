@@ -7,6 +7,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import NorthEastIcon from '@mui/icons-material/NorthEast';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 // @ts-ignore
@@ -21,6 +22,8 @@ const HomePage = (props: any) => {
   let rowGrap = props.isMobile ? 6 : 2;
   let titleTextSize = props.isMobile ? 12 : 7;
   let buttonsPb = props.isMobile ? 12 : 14;
+  let buttonsMl = props.isMobile ? 1 : undefined;
+  let buttonsMr = props.isMobile ? 1 : 2;
 
   const profile = {
     image: 'profile',
@@ -114,26 +117,36 @@ const HomePage = (props: any) => {
                 isMobile={props.isMobile}
                 link={URLS.linkedin}
                 startIcon={<LinkedInIcon />}
+                ml={buttonsMl}
+                mr={buttonsMr}
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
                 link={URLS.github}
                 startIcon={<GitHubIcon />}
+                ml={buttonsMl}
+                mr={buttonsMr}
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
                 link={URLS.resume}
                 startIcon={<DescriptionIcon />}
+                ml={buttonsMl}
+                mr={buttonsMr}
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
                 link={URLS.photography}
                 startIcon={<PhotoCameraIcon />}
+                ml={buttonsMl}
+                mr={buttonsMr}
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
                 link={URLS.photography}
                 startIcon={<InstagramIcon />}
+                ml={buttonsMl}
+                mr={buttonsMr}
               />
             </Grid>
           </Grid>
@@ -144,11 +157,15 @@ const HomePage = (props: any) => {
               px: 6,
               py: 4,
               my: 4,
+              boxShadow: '0 0 1rem 0 rgba(0, 0, 0, .5)',
+              backgroundColor: 'rgba(35, 35, 35, .15)',
+              backdropFilter: 'blur(5px)',
+              outline: '2px solid rgba(255, 255, 255, 0.35)',
               borderRadius: 4,
               textAlign: 'left',
             }}
           >
-            <Typography variant="h4" sx={{ mb: 2 }}>
+            <Typography variant="h4" sx={{ mt: 1, mb: 2 }}>
               ## README.md
             </Typography>
             <Typography variant="body1" align="left">
@@ -161,8 +178,9 @@ const HomePage = (props: any) => {
             <Button
               variant="outlined"
               size="large"
-              sx={{ mt: 3, mb: 8, color: '#ffffff' }}
+              sx={{ mt: 3, mb: 10, color: '#ffffff', borderRadius: 2 }}
               startIcon={<DescriptionIcon />}
+              endIcon={<NorthEastIcon />}
               href={URLS.resume}
               target="_blank"
             >
@@ -202,8 +220,9 @@ const HomePage = (props: any) => {
             <Button
               variant="outlined"
               size="large"
-              sx={{ mt: 3, mb: 8, color: '#ffffff' }}
+              sx={{ mt: 3, mb: 10, color: '#ffffff', borderRadius: 2 }}
               startIcon={<PhotoCameraIcon />}
+              endIcon={<NorthEastIcon />}
               href={URLS.photography}
               target="_blank"
             >
@@ -221,8 +240,9 @@ const HomePage = (props: any) => {
             <Button
               variant="outlined"
               size="large"
-              sx={{ mt: 3, mb: 8, color: '#ffffff' }}
+              sx={{ mt: 3, mb: 10, color: '#ffffff', borderRadius: 2 }}
               startIcon={<GitHubIcon />}
+              endIcon={<NorthEastIcon />}
               href={URLS.github}
               target="_blank"
             >
@@ -240,8 +260,9 @@ const HomePage = (props: any) => {
             <Button
               variant="outlined"
               size="large"
-              sx={{ mt: 3, mb: 2, color: '#ffffff' }}
+              sx={{ mt: 3, mb: 2, color: '#ffffff', borderRadius: 2 }}
               startIcon={<LinkedInIcon />}
+              endIcon={<NorthEastIcon />}
               href={URLS.linkedin}
               target="_blank"
             >
