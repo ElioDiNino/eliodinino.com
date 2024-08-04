@@ -7,6 +7,7 @@ interface ContainedIconButtonProps {
   link: string;
   ml: number | undefined;
   mr: number;
+  ariaLabel: string;
   startIcon: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export const ContainedIconButton = (props: ContainedIconButtonProps) => {
       href={props.link}
       target="_blank"
       size="medium"
+      aria-label={props.ariaLabel}
       startIcon={props.startIcon}
       sx={{
         borderRadius: '8px',

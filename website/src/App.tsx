@@ -49,6 +49,11 @@ let theme = createTheme({
       fontFamily: '"Overpass Mono", monospace',
       fontWeight: 500,
     },
+    subtitle1: {
+      fontSize: '1.6rem',
+      fontFamily: '"Overpass Mono", monospace',
+      fontWeight: 600,
+    },
     h2: {
       fontSize: '2.5rem',
       fontFamily: '"Overpass Mono", monospace',

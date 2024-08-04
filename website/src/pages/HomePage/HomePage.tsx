@@ -76,7 +76,7 @@ const HomePage = (props: any) => {
                   I'm Elio Di Nino
                 </Typography>
               )}
-              <Typography variant="h4" sx={{ mb: 1 }}>
+              <Typography variant="subtitle1" sx={{ mb: 1 }}>
                 <TypeIt
                   options={{
                     speed: 100,
@@ -119,6 +119,7 @@ const HomePage = (props: any) => {
                 startIcon={<LinkedInIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
+                ariaLabel='LinkedIn'
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -126,6 +127,7 @@ const HomePage = (props: any) => {
                 startIcon={<GitHubIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
+                ariaLabel='GitHub'
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -133,6 +135,7 @@ const HomePage = (props: any) => {
                 startIcon={<DescriptionIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
+                ariaLabel='Resume'
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -140,6 +143,7 @@ const HomePage = (props: any) => {
                 startIcon={<PhotoCameraIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
+                ariaLabel='Photography Portfolio'
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -147,6 +151,7 @@ const HomePage = (props: any) => {
                 startIcon={<InstagramIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
+                ariaLabel='Instagram'
               />
             </Grid>
           </Grid>
