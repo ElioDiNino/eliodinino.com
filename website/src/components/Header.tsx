@@ -4,6 +4,7 @@ import { Picture } from "./Picture";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { URLS } from "../constants";
 
 // Custom interfaces
 interface SubProps {
@@ -16,8 +17,26 @@ interface MainProps {
 }
 
 const drawerWidth = 240;
+
 // Specify navigation items
-const navItems = ['Home', 'Links', 'Contact'];
+const navItems = {
+    Home: {
+        url:'/',
+        target: "",
+    },
+    Projects: {
+        url: URLS.github,
+        target: "_blank"
+    },
+    Resume: {
+        url: URLS.resume,
+        target: "_blank",
+    },
+    Contact: {
+        url: '/contact',
+        target: ""
+    }
+};
 
 // Hide the header upon scrolling
 // eslint-disable-next-line
@@ -106,10 +125,10 @@ export default function Header(props: MainProps) {
             </Typography>
             <Divider />
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} component="a" href={`/${item.toLowerCase()}`}>
-                            <ListItemText primary={item} />
+                {Object.entries(navItems).map(([key, value]) => (
+                    <ListItem key={key} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }} component="a" href={value.url} target={value.target}>
+                            <ListItemText primary={key} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -123,8 +142,7 @@ export default function Header(props: MainProps) {
     return <>
         <Box sx={{ display: 'flex', mb: 4 }} >
             <ElevationScroll {...props} >
-                <AppBar component="nav" className="bar"
-                    sx={{ transition: "background-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out" }}>
+                <AppBar component="nav" className="bar">
                     <Toolbar>
                         {/* Mobile drawer handle */}
                         <IconButton
@@ -161,9 +179,9 @@ export default function Header(props: MainProps) {
                             <a href="/"><Picture picture={logo} /></a>
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            {navItems.map((item) => (
-                                <Button key={item} size="large" sx={{ color: '#fff' }} href={`/${item.toLowerCase()}`}>
-                                    {item}
+                            {Object.entries(navItems).map(([key, value]) => (
+                                <Button key={key} size="large" sx={{ color : '#fff' }} href={value.url} target={value.target}>
+                                    {key}
                                 </Button>
                             ))}
                         </Box>
