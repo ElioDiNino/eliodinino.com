@@ -97,6 +97,7 @@ function ScrollTop(props: SubProps) {
     if (anchor) {
       anchor.scrollIntoView({
         block: 'center',
+        behavior: 'smooth',
       });
     }
   };
@@ -106,7 +107,7 @@ function ScrollTop(props: SubProps) {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 1 }}
+        sx={{ position: 'fixed', bottom: 30, right: 30, zIndex: 1 }}
       >
         {children}
       </Box>
@@ -203,7 +204,7 @@ export default function Header(props: MainProps) {
                 <MenuIcon opacity="0" />
               </IconButton>
               <Typography
-                variant="h2"
+                variant="h3"
                 component="div"
                 sx={{
                   flexGrow: 1,
@@ -211,7 +212,7 @@ export default function Header(props: MainProps) {
                   display: { xs: 'none', sm: 'block' },
                 }}
               >
-                <a href="/">
+                <a href="/" style={{ fontSize: '60px'}}>
                   <Picture picture={logo} />
                 </a>
               </Typography>
