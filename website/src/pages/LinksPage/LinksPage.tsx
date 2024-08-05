@@ -126,7 +126,7 @@ const LinksPage = (props: any) => {
           >
             Resume
           </Button>
-          <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>
+          <Typography variant="h6" sx={{ mt: 4 }}>
             Photography
           </Typography>
           <IconButton href={URLS.photography} target="_blank">
