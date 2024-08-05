@@ -28,6 +28,7 @@ let theme = createTheme({
     mode: 'dark',
   },
   typography: {
+    fontWeightMedium: 400,
     fontFamily: [
       'Helvetica',
       'Roboto',
@@ -40,6 +41,7 @@ let theme = createTheme({
       'Fira Sans',
       'Droid Sans',
       'Helvetica Neue',
+      'sans-serif',
     ].join(','),
     button: {
       textTransform: 'none',
@@ -61,7 +63,7 @@ let theme = createTheme({
     },
     h3: {
       fontSize: '2.1rem',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h4: {
       fontSize: '1.6rem',
