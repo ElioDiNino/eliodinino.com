@@ -130,10 +130,10 @@ const LinksPage = (props: any) => {
             Photography
           </Typography>
           <IconButton href={URLS.photography} target="_blank">
-            <PhotoCameraIcon fontSize="large" />
+            <PhotoCameraIcon fontSize="medium" />
           </IconButton>
           <IconButton href={URLS.instagram} target="_blank">
-            <InstagramIcon fontSize="large" />
+            <InstagramIcon fontSize="medium" />
           </IconButton>
         </Paper>
       </div>
