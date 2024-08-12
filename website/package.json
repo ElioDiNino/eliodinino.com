@@ -17,22 +17,22 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@matt-block/react-recaptcha-v2": "^2.1.0",
-    "@mui/icons-material": "^5.16.5",
-    "@mui/material": "^5.16.5",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.2.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.25.1",
+    "react-router-dom": "^6.26.0",
     "typeit-react": "^2.7.2",
     "typescript": "^5.5.4",
-    "web-vitals": "^4.2.2"
+    "web-vitals": "^4.2.3"
   },
   "eslintConfig": {
     "extends": [
@@ -55,10 +55,10 @@
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.44.6",
     "@vitejs/plugin-react": "^4.3.1",
-    "cypress": "^13.13.1",
+    "cypress": "^13.13.2",
     "prettier": "3.3.3",
-    "vite": "^5.3.5",
+    "vite": "^5.4.0",
     "vite-plugin-svgr": "^4.2.0",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^5.0.1"
   }
 }
