@@ -147,7 +147,7 @@ const HomePage = (props: any) => {
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
-                link={URLS.photography}
+                link={URLS.instagram}
                 startIcon={<InstagramIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
