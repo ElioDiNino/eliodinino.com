@@ -17,21 +17,21 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@matt-block/react-recaptcha-v2": "^2.1.0",
-    "@mui/icons-material": "^6.0.2",
+    "@mui/icons-material": "^6.1.0",
     "@mui/material": "^6.0.1",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^22.5.4",
-    "@types/react": "^18.3.5",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.26.1",
-    "typeit-react": "^2.7.2",
-    "typescript": "^5.5.4",
+    "react-router-dom": "^6.26.2",
+    "typeit-react": "^2.7.3",
+    "typescript": "^5.6.2",
     "web-vitals": "^4.2.3"
   },
   "eslintConfig": {
@@ -53,11 +53,11 @@
     ]
   },
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.44.7",
+    "@applitools/eyes-cypress": "^3.44.8",
     "@vitejs/plugin-react": "^4.3.1",
     "cypress": "^13.14.2",
     "prettier": "3.3.3",
-    "vite": "^5.4.3",
+    "vite": "^5.4.5",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^5.0.1"
   }
