@@ -17,13 +17,13 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@matt-block/react-recaptcha-v2": "^2.1.0",
-    "@mui/icons-material": "^6.1.5",
+    "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.0.1",
-    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.8.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "react": "^18.3.1",
@@ -53,12 +53,12 @@
     ]
   },
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.45.0",
+    "@applitools/eyes-cypress": "^3.45.2",
     "@vitejs/plugin-react": "^4.3.3",
     "cypress": "^13.15.1",
     "prettier": "3.3.3",
     "vite": "^5.4.10",
-    "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.0.1"
   }
 }
