@@ -15,6 +15,7 @@ import {
   useScrollTrigger,
   Fade,
   Fab,
+  AppBarProps,
 } from '@mui/material';
 import { Picture } from './Picture';
 import IconButton from '@mui/material/IconButton';
@@ -75,7 +76,7 @@ function ElevationScroll(props: SubProps) {
     threshold: 0,
   });
 
-  return React.cloneElement(children, {
+  return React.cloneElement(children as React.ReactElement<AppBarProps>, {
     elevation: trigger ? 4 : 0,
     color: trigger ? undefined : 'transparent',
   });
