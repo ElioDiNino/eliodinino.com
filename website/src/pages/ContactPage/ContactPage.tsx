@@ -17,7 +17,7 @@ import ReCaptcha from '@matt-block/react-recaptcha-v2';
 import './ContactPage.css';
 
 const ContactPage = (props: any) => {
-  const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
+  const form = React.useRef<HTMLFormElement>(null);
   // Update browser title
   document.title = props.pageTitle + ' - ' + props.siteTitle;
   const [captchaResult, setCaptchaResult] = React.useState(false);
@@ -52,37 +52,39 @@ const ContactPage = (props: any) => {
   const sendEmail = (e: any) => {
     e.preventDefault();
     // Send an email through emailjs
-    emailjs
-      .sendForm(
-        'service_2xaitxu',
-        'contact_form',
-        form.current,
-        'MHeER2deeXVWAC_7T',
-      )
-      .then(
-        (result: any) => {
-          // Clear all fields
-          console.log(result.text);
-          setName('');
-          setEmail('');
-          setMessage('');
-          setCaptchaResult(false);
-          setAlertType('success');
-          setAlertMessage('Thank you for submitting!');
-          setOpen(true);
-          setKey(key + 1);
-        },
-        (error: any) => {
-          console.log(error.text);
-          setAlertType('error');
-          setAlertMessage(
-            'There was an error submitting your message. Please try again.',
-          );
-          setOpen(true);
-          setCaptchaResult(false);
-          setKey(key + 1);
-        },
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_2xaitxu',
+          'contact_form',
+          form.current,
+          'MHeER2deeXVWAC_7T',
+        )
+        .then(
+          (result: any) => {
+            // Clear all fields
+            console.log(result.text);
+            setName('');
+            setEmail('');
+            setMessage('');
+            setCaptchaResult(false);
+            setAlertType('success');
+            setAlertMessage('Thank you for submitting!');
+            setOpen(true);
+            setKey(key + 1);
+          },
+          (error: any) => {
+            console.log(error.text);
+            setAlertType('error');
+            setAlertMessage(
+              'There was an error submitting your message. Please try again.',
+            );
+            setOpen(true);
+            setCaptchaResult(false);
+            setKey(key + 1);
+          },
+        );
+    }
   };
 
   return (
