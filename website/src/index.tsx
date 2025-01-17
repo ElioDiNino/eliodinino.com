@@ -1,9 +1,10 @@
-import * as Sentry from '@sentry/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+
+import * as Sentry from '@sentry/react';
 
 Sentry.init({
   dsn: 'https://0656a3ffc6ab7d8195bdf491eea907b3@o4508218594361344.ingest.us.sentry.io/4508495715303424',

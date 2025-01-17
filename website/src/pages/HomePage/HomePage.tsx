@@ -119,7 +119,7 @@ const HomePage = (props: any) => {
                 startIcon={<LinkedInIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
-                ariaLabel='LinkedIn'
+                ariaLabel="LinkedIn"
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -127,7 +127,7 @@ const HomePage = (props: any) => {
                 startIcon={<GitHubIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
-                ariaLabel='GitHub'
+                ariaLabel="GitHub"
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -135,7 +135,7 @@ const HomePage = (props: any) => {
                 startIcon={<DescriptionIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
-                ariaLabel='Resume'
+                ariaLabel="Resume"
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -143,7 +143,7 @@ const HomePage = (props: any) => {
                 startIcon={<PhotoCameraIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
-                ariaLabel='Photography Portfolio'
+                ariaLabel="Photography Portfolio"
               />
               <ContainedIconButton
                 isMobile={props.isMobile}
@@ -151,7 +151,7 @@ const HomePage = (props: any) => {
                 startIcon={<InstagramIcon />}
                 ml={buttonsMl}
                 mr={buttonsMr}
-                ariaLabel='Instagram'
+                ariaLabel="Instagram"
               />
             </Grid>
           </Grid>
