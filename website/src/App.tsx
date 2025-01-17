@@ -10,6 +10,8 @@ import {
 import CssBaseline from '@mui/material/CssBaseline';
 import { useMediaQuery } from 'react-responsive';
 
+import * as Sentry from '@sentry/react';
+
 import Layout from './layouts/MainLayout';
 import HomePage from './pages/HomePage/HomePage';
 import NoPage from './pages/404Page/NoPage';
@@ -90,10 +92,12 @@ function App() {
     isMobile: isMobile,
   };
 
+  const SentryRoutes = Sentry.withSentryReactRouterV7Routing(Routes);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Routes>
+      <SentryRoutes>
         {/* Hide the footer and header on the links page */}
         <Route element={<Layout layout={layout} />}>
           <Route
@@ -133,7 +137,7 @@ function App() {
             element={<NoPage pageTitle="404" siteTitle={siteTitle} />}
           />
         </Route>
-      </Routes>
+      </SentryRoutes>
     </ThemeProvider>
   );
 }

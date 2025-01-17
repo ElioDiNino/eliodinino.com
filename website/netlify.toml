@@ -17,14 +17,19 @@
     object-src   'none';
     base-uri     'self';
     connect-src  'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
-                  https://*.google.com https://*.google.ca cloudflareinsights.com https://api.emailjs.com;
+                  https://*.google.com https://*.google.ca cloudflareinsights.com *.sentry.io https://api.emailjs.com;
     font-src     'self' https://fonts.gstatic.com;
     frame-src    'self' https://td.doubleclick.net https://*.google.com https://app.netlify.com/;
     img-src      'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
                   https://*.google.com https://*.google.ca https://fonts.gstatic.com;
     manifest-src 'self';
     media-src    'self';
-    worker-src   'none'
+    worker-src   'self' blob:;
+    report-uri   https://o4508218594361344.ingest.us.sentry.io/api/4508495715303424/security/?sentry_key=0656a3ffc6ab7d8195bdf491eea907b3;
+    report-to    csp-endpoint
+    '''
+    Reporting-Endpoints = '''
+    csp-endpoint="https://o4508218594361344.ingest.us.sentry.io/api/4508495715303424/security/?sentry_key=0656a3ffc6ab7d8195bdf491eea907b3"
     '''
 
 [[plugins]]
