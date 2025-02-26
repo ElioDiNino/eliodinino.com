@@ -16,3 +16,17 @@ updates:
       dependencies:
         patterns:
           - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "Dependencies"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "ElioDiNino"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
