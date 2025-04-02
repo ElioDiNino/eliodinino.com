@@ -47,19 +47,18 @@ const HomePage = (props: any) => {
             sx={{ width: paperWidth, mx: 'auto', mt: 10 }}
           >
             {props.isMobile && (
-              <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+              <Grid sx={{ textAlign: 'center', mt: 2 }} size={12}>
                 <Picture picture={profile} />
               </Grid>
             )}
             <Grid
-              item
-              xs={titleTextSize}
               sx={{
                 textAlign: textAlign,
                 justifyContent: 'space-evenly',
                 display: 'flex',
                 flexDirection: 'column',
               }}
+              size={titleTextSize}
             >
               {props.isDesktopOrLaptopOrTablet && (
                 <>
@@ -108,11 +107,11 @@ const HomePage = (props: any) => {
               </Typography>
             </Grid>
             {props.isDesktopOrLaptopOrTablet && (
-              <Grid item xs={5} sx={{ textAlign: 'right' }}>
+              <Grid sx={{ textAlign: 'right' }} size={5}>
                 <Picture picture={profile} />
               </Grid>
             )}
-            <Grid item xs={12} sx={{ textAlign: textAlign, pb: buttonsPb }}>
+            <Grid sx={{ textAlign: textAlign, pb: buttonsPb }} size={12}>
               <ContainedIconButton
                 isMobile={props.isMobile}
                 link={URLS.linkedin}
