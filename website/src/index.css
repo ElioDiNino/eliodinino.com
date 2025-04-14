@@ -1,7 +1,3 @@
-:root {
-  color-scheme: dark;
-}
-
 #root {
   background-image: url('images/background-dark.jpg');
   background-image: -webkit-image-set(
@@ -46,4 +42,13 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+/*
+  iframes don't render with a transparent background if their color-scheme
+  is not the same as the parent site so this ensures we don't get ugly white
+  boxes around any iframes (e.g. reCaptcha)
+*/
+iframe {
+  color-scheme: light;
 }
