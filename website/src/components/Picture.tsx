@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import logopng from '../images/logo.png';
 import logowebp from '../images/logo.webp';
 import logoavif from '../images/logo.avif';

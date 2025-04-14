@@ -1,6 +1,3 @@
-import React from 'react';
-import './App.css';
-
 import { Routes, Route, Navigate } from 'react-router-dom';
 import {
   ThemeProvider,
@@ -96,7 +93,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline enableColorScheme />
       <SentryRoutes>
         {/* Hide the footer and header on the links page */}
         <Route element={<Layout layout={layout} />}>
