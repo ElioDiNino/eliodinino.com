@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Box, Button, Paper, Typography, Grid } from '@mui/material';
 import TypeIt from 'typeit-react';
 import { Picture } from '../../components/Picture';
@@ -10,7 +9,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
-// @ts-ignore
 import './HomePage.css';
 import { URLS } from '../../constants';
 

@@ -1,8 +1,5 @@
 /* Google reCaptcha formatting */
-#captcha {
-  text-align: center;
-}
-
 .g-recaptcha {
+  /* Center the block */
   display: inline-block;
 }

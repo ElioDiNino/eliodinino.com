@@ -12,7 +12,6 @@ import {
 import emailjs from '@emailjs/browser';
 // https://www.npmjs.com/package/@matt-block/react-recaptcha-v2
 import ReCaptcha from '@matt-block/react-recaptcha-v2';
-// https://www.npmjs.com/package/react-responsive
 
 import './ContactPage.css';
 
@@ -24,8 +23,6 @@ const ContactPage = (props: any) => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [message, setMessage] = React.useState('');
-  // eslint-disable-next-line
-  const [theme, setTheme] = React.useState('dark');
   const [key, setKey] = React.useState(0);
   const [open, setOpen] = React.useState(false);
   const [alertMessage, setAlertMessage] = React.useState('');
@@ -34,8 +31,7 @@ const ContactPage = (props: any) => {
   );
 
   // Pick captcha size based on screen size
-  // eslint-disable-next-line
-  const [size, setSize] = React.useState<'normal' | 'compact' | undefined>(
+  const [size] = React.useState<'normal' | 'compact' | undefined>(
     () => {
       if (props.isMobile) {
         return 'compact';
@@ -191,7 +187,7 @@ const ContactPage = (props: any) => {
               <ReCaptcha
                 key={key}
                 siteKey="6LdvcmIhAAAAAKDe5SVr6Z_gNLfOYO06QIl6Abm6"
-                theme={theme === 'dark' ? 'dark' : 'light'}
+                theme='dark'
                 size={size}
                 onSuccess={() => {
                   setCaptchaResult(true);

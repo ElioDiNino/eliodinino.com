@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { IconButton, Button, Paper, Typography } from '@mui/material';
 import { Picture } from '../../components/Picture';
 import InstagramIcon from '@mui/icons-material/Instagram';
