@@ -10,8 +10,6 @@ updates:
     labels:
       - "Dependencies"
     open-pull-requests-limit: 10
-    reviewers:
-      - "ElioDiNino"
     groups:
       dependencies:
         patterns:
@@ -24,8 +22,6 @@ updates:
     labels:
       - "Dependencies"
     open-pull-requests-limit: 10
-    reviewers:
-      - "ElioDiNino"
     groups:
       dependencies:
         patterns:
