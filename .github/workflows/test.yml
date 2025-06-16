@@ -1,0 +1,72 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      generate_snapshots:
+        description: 'Generate new Cypress test snapshots'
+        required: true
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cypress:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Cypress Tests
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: website
+          build: npm run build
+          start: npm run serve
+
+      - name: Generate New Cypress Test Snapshots
+        id: generate_snapshots
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: website
+          build: npm run build
+          start: npm run serve
+          env:
+            CYPRESS_visualRegressionType=base
+          spec:
+            cypress/e2e/visual.cy.ts
+
+      - name: Upload Cypress Snapshots
+        # We upload snapshots when the previous step fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-snapshots
+          if-no-files-found: ignore
+          path: |
+            website/cypress/snapshots/diff
+            website/cypress/snapshots/actual
+            ${{ steps.generate_snapshots.outcome == 'success' && 'website/cypress/snapshots/base' || '' }}
+
+      - name: Create Pull Request With Snapshots
+        if: steps.generate_snapshots.outcome == 'success'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'Update Cypress Snapshots'
+          body: 'This pull request contains the latest Cypress test snapshots.'
+          commit-message: 'chore(ci): Update Cypress snapshots'
+          branch: cypress-snapshots
+          add-paths: |
+            website/cypress/snapshots
+          delete-branch: true
+          sign-commits: true
+          reviewers: ElioDiNino
