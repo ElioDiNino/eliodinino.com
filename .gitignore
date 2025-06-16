@@ -1,6 +1,6 @@
 .vscode
 .idea
-videos
-screenshots
-TODO.md
 .DS_Store
+videos
+website/cypress/snapshots/*
+!website/cypress/snapshots/base
