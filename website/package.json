@@ -10,7 +10,8 @@
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:interactive": "cypress open"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
