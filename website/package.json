@@ -17,6 +17,8 @@
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/overpass-mono": "^5.2.6",
+    "@fontsource/roboto": "^5.2.6",
     "@matt-block/react-recaptcha-v2": "^2.2.0",
     "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.0.1",
