@@ -56,7 +56,6 @@ const navItems = {
 };
 
 // Hide the header upon scrolling
-// eslint-disable-next-line
 function HideOnScroll(props: SubProps) {
   const { children } = props;
   const trigger = useScrollTrigger();
