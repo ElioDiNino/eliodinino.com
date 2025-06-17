@@ -31,27 +31,3 @@
     Reporting-Endpoints = '''
     csp-endpoint="https://o4508218594361344.ingest.us.sentry.io/api/4508495715303424/security/?sentry_key=0656a3ffc6ab7d8195bdf491eea907b3"
     '''
-
-[[plugins]]
-  package = "netlify-plugin-submit-sitemap"
-
-	[plugins.inputs]
-  # https://github.com/cdeleeuwe/netlify-plugin-submit-sitemap
-
-	# Path to the sitemap URL (optional, default = /sitemap.xml)
-	sitemapPath = "/sitemap.xml"
-
-	# Time in seconds to not submit the sitemap after successful submission
-	ignorePeriod = 0
-
-	# Enabled providers to submit sitemap to (optional, default = 'google', 'yandex'). Possible providers are currently only 'google', 'yandex'.
-	providers = [
-		"google",
-		"yandex"
-	]
-
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-
-  [plugins.inputs]
-    skipPatterns = []
