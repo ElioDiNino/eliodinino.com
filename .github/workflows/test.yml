@@ -24,20 +24,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
+
       - name: Run Cypress Tests
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm run serve
+          build: pnpm run build
+          start: pnpm run serve
 
       - name: Generate New Cypress Test Snapshots
         id: generate_snapshots
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm run serve
+          build: pnpm run build
+          start: pnpm run serve
           env:
             visualRegressionType=base
           spec:
