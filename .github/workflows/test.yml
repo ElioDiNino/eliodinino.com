@@ -41,7 +41,7 @@ jobs:
           build: npm run build
           start: npm run serve
           env:
-            CYPRESS_visualRegressionType=base
+            visualRegressionType=base
           spec:
             cypress/e2e/visual.cy.ts
 
