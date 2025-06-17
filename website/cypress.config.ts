@@ -7,7 +7,7 @@ export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:4173',
     env: {
-      visualRegressionType: 'regression', // Use 'base' to update reference images
+      visualRegressionType: 'base', // Use 'base' to update reference images
       visualRegressionBaseDirectory: 'cypress/snapshots/base',
       visualRegressionDiffDirectory: 'cypress/snapshots/diff',
       visualRegressionGenerateDiff: 'fail',

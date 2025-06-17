@@ -5,6 +5,7 @@ describe('Visual Regression Tests', () => {
     cy.visit('/');
     cy.wait(2000);
     cy.compareSnapshot('home', 0.01);
+    cy.compareSnapshot('home-test', 0.01);
   });
 
   it('contact', () => {
