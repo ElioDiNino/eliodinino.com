@@ -1,4 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/475be5c8-5f76-4e58-8657-3160f7de2fba/deploy-status)](https://app.netlify.com/sites/eliodinino/deploys)
+[![Cypress Tests](https://github.com/ElioDiNino/eliodinino.com/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/ElioDiNino/eliodinino.com/actions/workflows/test.yml)
+
 # Personal Website ([eliodinino.com](https://eliodinino.com))
 Home of the source code for my website. The site is built using React with Typescript and is served with Netlify.
 

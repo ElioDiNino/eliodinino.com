@@ -182,11 +182,11 @@ const ContactPage = (props: any) => {
             fullWidth
             sx={{ mb: 2 }}
           />
-          <div id="capchta">
+          <div id="captcha">
             {size && (
               <ReCaptcha
                 key={key}
-                siteKey="6LdvcmIhAAAAAKDe5SVr6Z_gNLfOYO06QIl6Abm6"
+                siteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 theme='dark'
                 size={size}
                 onSuccess={() => {

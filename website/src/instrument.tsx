@@ -22,7 +22,7 @@ Sentry.init({
     }),
   ],
   // Tracing
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.25,
   // Which URLs distributed tracing should be enabled one
   tracePropagationTargets: [
     'localhost',
