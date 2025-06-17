@@ -42,6 +42,8 @@ jobs:
         with:
           build: pnpm run build
           start: pnpm run serve
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Generate New Cypress Test Snapshots
         id: generate_snapshots
