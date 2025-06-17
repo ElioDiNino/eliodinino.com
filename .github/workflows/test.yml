@@ -28,7 +28,6 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
         uses: cypress-io/github-action@v6
         with:
-          working-directory: website
           build: npm run build
           start: npm run serve
 
@@ -37,7 +36,6 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
         uses: cypress-io/github-action@v6
         with:
-          working-directory: website
           build: npm run build
           start: npm run serve
           env:
@@ -53,9 +51,9 @@ jobs:
           name: cypress-snapshots
           if-no-files-found: ignore
           path: |
-            website/cypress/snapshots/diff
-            website/cypress/snapshots/actual
-            ${{ steps.generate_snapshots.outcome == 'success' && 'website/cypress/snapshots/base' || '' }}
+            cypress/snapshots/diff
+            cypress/snapshots/actual
+            ${{ steps.generate_snapshots.outcome == 'success' && 'cypress/snapshots/base' || '' }}
 
       - name: Create Pull Request With Snapshots
         if: steps.generate_snapshots.outcome == 'success'
@@ -66,7 +64,7 @@ jobs:
           commit-message: 'chore(ci): Update Cypress snapshots'
           branch: cypress-snapshots
           add-paths: |
-            website/cypress/snapshots
+            cypress/snapshots
           delete-branch: true
           sign-commits: true
           reviewers: ElioDiNino
