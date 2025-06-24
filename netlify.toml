@@ -20,7 +20,7 @@
                   https://*.google.com https://*.google.ca cloudflareinsights.com *.sentry.io https://api.emailjs.com;
     font-src     'self' data:;
     frame-src    'self' https://td.doubleclick.net https://*.google.com https://app.netlify.com/;
-    img-src      'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
+    img-src      'self' data: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
                   https://*.google.com https://*.google.ca;
     manifest-src 'self';
     media-src    'self';
