@@ -1,6 +1,0 @@
-comment:
-  require_bundle_changes: True
-
-bundle_analysis:
-  warning_threshold: "5%"
-  status: "informational"
