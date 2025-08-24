@@ -12,12 +12,12 @@
     Content-Security-Policy = '''
     default-src  'self';
     script-src   'report-sample' 'self' 'unsafe-inline' https://*.googletagmanager.com https://www.google.com/recaptcha/
-                  https://www.gstatic.com/recaptcha/ ajax.cloudflare.com static.cloudflareinsights.com;
+                  https://www.gstatic.com/recaptcha/ https://ingest.eliodinino.com ajax.cloudflare.com static.cloudflareinsights.com;
     style-src    'report-sample' 'self' 'unsafe-inline' https://*.googletagmanager.com;
     object-src   'none';
     base-uri     'self';
     connect-src  'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
-                  https://*.google.com https://*.google.ca cloudflareinsights.com *.sentry.io https://api.emailjs.com;
+                  https://*.google.com https://*.google.ca https://ingest.eliodinino.com cloudflareinsights.com *.sentry.io https://api.emailjs.com;
     font-src     'self' data:;
     frame-src    'self' https://td.doubleclick.net https://*.google.com https://app.netlify.com/;
     img-src      'self' data: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
