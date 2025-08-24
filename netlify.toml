@@ -11,17 +11,15 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = '''
     default-src  'self';
-    script-src   'report-sample' 'self' 'unsafe-inline' https://*.googletagmanager.com https://www.google.com/recaptcha/
-                  https://www.gstatic.com/recaptcha/ https://ingest.eliodinino.com ajax.cloudflare.com static.cloudflareinsights.com;
-    style-src    'report-sample' 'self' 'unsafe-inline' https://*.googletagmanager.com;
+    script-src   'report-sample' 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/
+                  https://ingest.eliodinino.com https://ajax.cloudflare.com https://static.cloudflareinsights.com;
+    style-src    'report-sample' 'self' 'unsafe-inline';
     object-src   'none';
     base-uri     'self';
-    connect-src  'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
-                  https://*.google.com https://*.google.ca https://ingest.eliodinino.com cloudflareinsights.com *.sentry.io https://api.emailjs.com;
+    connect-src  'self' https://api.emailjs.com https://ingest.eliodinino.com https://cloudflareinsights.com https://*.sentry.io;
     font-src     'self' data:;
-    frame-src    'self' https://td.doubleclick.net https://*.google.com https://app.netlify.com/;
-    img-src      'self' data: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net
-                  https://*.google.com https://*.google.ca;
+    frame-src    'self' https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://app.netlify.com/;
+    img-src      'self' data:;
     manifest-src 'self';
     media-src    'self';
     worker-src   'self' blob:;
