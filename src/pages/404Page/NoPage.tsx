@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { Paper, Button, Typography, Box } from '@mui/material';
+import { track } from '@plausible-analytics/tracker';
 
 const NoPage = (props: any) => {
   // Update browser title
   document.title = props.pageTitle + ' - ' + props.siteTitle;
+
+  // Track 404 event when component mounts
+  React.useEffect(() => {
+    track('404', { props: { path: document.location.pathname } });
+  }, []);
   return (
     <>
       <Box sx={{ verticalAlign: 'middle', pb: 10 }}>

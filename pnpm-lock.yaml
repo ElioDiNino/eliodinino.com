@@ -32,6 +32,9 @@ importers:
       '@mui/material':
         specifier: ^7.3.1
         version: 7.3.1(@emotion/react@11.14.0(@types/react@19.1.10)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.10)(react@19.1.1))(@types/react@19.1.10)(react@19.1.1))(@types/react@19.1.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@plausible-analytics/tracker':
+        specifier: ^0.4.0
+        version: 0.4.0
       '@sentry/react':
         specifier: ^10.5.0
         version: 10.5.0(react@19.1.1)
@@ -550,6 +553,9 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@plausible-analytics/tracker@0.4.0':
+    resolution: {integrity: sha512-KXwttotIZymo3yGzargrsxl9hjXJo5N+Kips3ZMamYqJxJqv1Zx+POC6WOFxYwDe1iJW7T91ItQYD8mZsznpXQ==}
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
@@ -2604,6 +2610,8 @@ snapshots:
       react-is: 19.1.1
     optionalDependencies:
       '@types/react': 19.1.10
+
+  '@plausible-analytics/tracker@0.4.0': {}
 
   '@popperjs/core@2.11.8': {}
 
