@@ -14,7 +14,9 @@ Sentry.init({
   environment: import.meta.env.MODE,
   enableLogs: true,
   integrations: [
-    Sentry.replayIntegration(),
+    Sentry.replayIntegration({
+      block: ['iframe'],
+    }),
     Sentry.reactRouterV7BrowserTracingIntegration({
       useEffect: React.useEffect,
       useLocation,
