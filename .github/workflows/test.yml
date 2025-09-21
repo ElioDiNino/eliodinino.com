@@ -22,15 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
         with:
           version: latest
 
       - name: Install Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: 'pnpm'
@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Cypress Tests
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@b8ba51a856ba5f4c15cf39007636d4ab04f23e3c # v6.10.2
         with:
           build: pnpm run build
           start: pnpm run serve
@@ -48,7 +48,7 @@ jobs:
       - name: Generate New Cypress Test Snapshots
         id: generate_snapshots
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@b8ba51a856ba5f4c15cf39007636d4ab04f23e3c # v6.10.2
         with:
           build: pnpm run build
           start: pnpm run serve
@@ -60,7 +60,7 @@ jobs:
       - name: Upload Cypress Snapshots
         # We upload snapshots when the previous step fails
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: cypress-snapshots
           if-no-files-found: ignore
@@ -71,7 +71,7 @@ jobs:
 
       - name: Create Pull Request With Snapshots
         if: steps.generate_snapshots.outcome == 'success'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           title: 'Update Cypress Snapshots'
           body: 'This pull request contains the latest Cypress test snapshots.'
