@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Cypress Tests
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
-        uses: cypress-io/github-action@b8ba51a856ba5f4c15cf39007636d4ab04f23e3c # v6.10.2
+        uses: cypress-io/github-action@e65cba2e7319696fc0fdc4d5a319b737aec4ba1c # v6.10.3
         with:
           build: pnpm run build
           start: pnpm run serve
@@ -48,7 +48,7 @@ jobs:
       - name: Generate New Cypress Test Snapshots
         id: generate_snapshots
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
-        uses: cypress-io/github-action@b8ba51a856ba5f4c15cf39007636d4ab04f23e3c # v6.10.2
+        uses: cypress-io/github-action@e65cba2e7319696fc0fdc4d5a319b737aec4ba1c # v6.10.3
         with:
           build: pnpm run build
           start: pnpm run serve
@@ -60,7 +60,7 @@ jobs:
       - name: Upload Cypress Snapshots
         # We upload snapshots when the previous step fails
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           name: cypress-snapshots
           if-no-files-found: ignore
