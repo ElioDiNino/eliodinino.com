@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Cypress Tests
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.generate_snapshots == 'false'
-        uses: cypress-io/github-action@d842ab15a88774cf1311cc07f0e7112024c3dbd7 # v6.10.6
+        uses: cypress-io/github-action@2ad32e649e4db26c07674ebae31a297601dbcbaf # v6.10.8
         with:
           build: pnpm run build
           start: pnpm run serve
@@ -48,7 +48,7 @@ jobs:
       - name: Generate New Cypress Test Snapshots
         id: generate_snapshots
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_snapshots == 'true'
-        uses: cypress-io/github-action@d842ab15a88774cf1311cc07f0e7112024c3dbd7 # v6.10.6
+        uses: cypress-io/github-action@2ad32e649e4db26c07674ebae31a297601dbcbaf # v6.10.8
         with:
           build: pnpm run build
           start: pnpm run serve
