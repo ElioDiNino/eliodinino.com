@@ -5,6 +5,7 @@
   "description": "Elio Di Nino's personal website",
   "author": "Elio Di Nino",
   "homepage": "https://eliodinino.com",
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -34,18 +35,6 @@
     "typescript": "^5.9.3",
     "web-vitals": "^5.2.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "last 2 versions"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@sentry/vite-plugin": "^5.1.1",
     "@types/node": "^25.5.2",
@@ -57,5 +46,17 @@
     "prettier": "^3.8.1",
     "vite": "^8.0.5",
     "vite-plugin-svgr": "^5.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "last 2 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
