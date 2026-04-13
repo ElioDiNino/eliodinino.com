@@ -1,8 +1,9 @@
 packages:
   - '.'
 
-onlyBuiltDependencies:
-  - '@sentry/cli'
-  - 'cypress'
-  - 'esbuild'
-  - 'typeit'
+strictDepBuilds: true
+allowBuilds:
+  '@sentry/cli': true
+  cypress: true
+  esbuild: true
+  typeit: true
