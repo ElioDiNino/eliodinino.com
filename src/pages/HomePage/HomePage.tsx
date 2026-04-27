@@ -40,9 +40,7 @@ const HomePage = (props: any) => {
         <Box sx={{ pb: 25, maxWidth: 1000, mx: 'auto' }}>
           <Grid
             container
-            columnGap={0}
-            rowGap={rowGrap}
-            sx={{ width: paperWidth, mx: 'auto', mt: 10 }}
+            sx={{ width: paperWidth, mx: 'auto', mt: 10, columnGap: 0, rowGap: rowGrap }}
           >
             {props.isMobile && (
               <Grid sx={{ textAlign: 'center', mt: 2 }} size={12}>
