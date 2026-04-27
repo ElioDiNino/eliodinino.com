@@ -183,9 +183,9 @@ export default function Header(props: MainProps) {
               <Typography
                 variant="h3"
                 component="div"
-                fontSize="3.5rem"
                 sx={{
                   flexGrow: 1,
+                  fontSize: '3.5rem',
                   textAlign: 'center',
                   display: { sm: 'none' },
                 }}
