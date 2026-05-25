@@ -81,11 +81,11 @@ const HomePage = (props: any) => {
                   }}
                   getBeforeInit={(instance) => {
                     instance
-                      .type('Engineering Student')
+                      .type('Software Engineer')
                       .pause(2000)
                       .delete()
                       .pause(1000)
-                      .type('Software Developer')
+                      .type('Homelabber')
                       .pause(2000)
                       .delete()
                       .pause(1000)
