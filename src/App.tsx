@@ -89,7 +89,7 @@ function App() {
     isMobile: isMobile,
   };
 
-  const SentryRoutes = Sentry.withSentryReactRouterV7Routing(Routes);
+  const SentryRoutes = Sentry.wrapReactRouterRouting(Routes);
 
   return (
     <ThemeProvider theme={theme}>
