@@ -17,7 +17,7 @@ Sentry.init({
     Sentry.replayIntegration({
       block: ['iframe'],
     }),
-    Sentry.reactRouterV7BrowserTracingIntegration({
+    Sentry.reactRouterBrowserTracingIntegration({
       useEffect: React.useEffect,
       useLocation,
       useNavigationType,
