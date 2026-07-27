@@ -20,19 +20,19 @@
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@fontsource/overpass-mono": "^5.2.8",
-    "@fontsource/roboto": "^5.2.10",
+    "@fontsource/overpass-mono": "^5.3.0",
+    "@fontsource/roboto": "^5.3.0",
     "@matt-block/react-recaptcha-v2": "^2.2.1",
     "@mui/icons-material": "^9.2.0",
     "@mui/material": "^9.2.0",
     "@plausible-analytics/tracker": "^0.4.5",
-    "@sentry/react": "^10.65.0",
+    "@sentry/react": "^10.66.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-responsive": "^10.0.1",
     "react-router": "^8.3.0",
     "typeit-react": "^2.7.8",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "web-vitals": "^5.3.0"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "cypress": "^15.18.1",
     "cypress-visual-regression": "^6.0.0",
     "prettier": "^3.9.5",
-    "vite": "^8.1.4",
+    "vite": "^8.1.5",
     "vite-plugin-svgr": "^5.2.0"
   },
   "browserslist": {
