@@ -39,12 +39,12 @@
     "@sentry/vite-plugin": "^5.4.0",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^6.0.5",
-    "cypress": "^15.20.1",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.0",
+    "cypress": "^15.21.0",
     "cypress-visual-regression": "^6.0.0",
     "prettier": "^3.9.6",
-    "vite": "^8.2.1",
+    "vite": "^8.2.2",
     "vite-plugin-svgr": "^5.2.0"
   },
   "browserslist": {
