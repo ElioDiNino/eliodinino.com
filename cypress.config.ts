@@ -4,7 +4,6 @@ import { configureVisualRegression } from 'cypress-visual-regression';
 export default defineConfig({
   viewportWidth: 1200,
   viewportHeight: 800,
-  allowCypressEnv: false,
   e2e: {
     baseUrl: 'http://localhost:4173',
     expose: {
