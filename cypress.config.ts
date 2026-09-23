@@ -2,6 +2,7 @@ import { defineConfig } from 'cypress';
 import { configureVisualRegression } from 'cypress-visual-regression';
 
 export default defineConfig({
+  defaultBrowser: 'chrome-for-testing',
   viewportWidth: 1200,
   viewportHeight: 800,
   e2e: {
