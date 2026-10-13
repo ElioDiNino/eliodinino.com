@@ -12,7 +12,6 @@ import { init } from '@plausible-analytics/tracker';
 Sentry.init({
   dsn: 'https://0656a3ffc6ab7d8195bdf491eea907b3@o4508218594361344.ingest.us.sentry.io/4508495715303424',
   environment: import.meta.env.MODE,
-  enableLogs: true,
   integrations: [
     Sentry.replayIntegration({
       block: ['iframe'],

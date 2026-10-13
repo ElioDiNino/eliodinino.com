@@ -5,7 +5,7 @@
   "description": "Elio Di Nino's personal website",
   "author": "Elio Di Nino",
   "homepage": "https://eliodinino.com",
-  "packageManager": "pnpm@12.5.1+sha512.e3f305bc784a2bc89f5ad3b6138889470fae8d2af5f36b61216ec91c2c3d64089775f9de38aac331044ea40f245cb0d5666392dfdf65824e1907ef6a2c62de5f",
+  "packageManager": "pnpm@12.11.2+sha512.25a51652a196785af5f28bda6dfe8dc582ebefa4ac1d180221ce1390231c5fb76637822ea4b6e4633ce74acdcb0a77f725af11bad38177fdeddaee818a955cb9",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -26,25 +26,25 @@
     "@mui/icons-material": "^9.4.0",
     "@mui/material": "^9.4.0",
     "@plausible-analytics/tracker": "^0.4.6",
-    "@sentry/react": "^10.75.3",
+    "@sentry/react": "^11.1.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-responsive": "^10.0.1",
     "react-router": "^8.4.0",
     "typeit-react": "^2.7.8",
     "typescript": "^7.0.2",
-    "web-vitals": "^6.2.2"
+    "web-vitals": "^6.2.3"
   },
   "devDependencies": {
     "@sentry/vite-plugin": "^5.4.0",
-    "@types/node": "^26.6.3",
+    "@types/node": "^26.6.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.1",
-    "cypress": "^16.1.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "cypress": "^16.1.1",
     "cypress-visual-regression": "^6.0.1",
     "prettier": "^3.9.9",
-    "vite": "^8.3.1",
+    "vite": "^8.3.2",
     "vite-plugin-svgr": "^5.2.0"
   },
   "browserslist": {
