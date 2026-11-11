@@ -10,8 +10,7 @@ import {
 } from '@mui/material';
 // https://www.emailjs.com/docs/sdk/installation/
 import emailjs from '@emailjs/browser';
-// https://www.npmjs.com/package/@matt-block/react-recaptcha-v2
-import ReCaptcha from '@matt-block/react-recaptcha-v2';
+import { ReCaptcha } from '../../components/ReCaptcha';
 
 import './ContactPage.css';
 

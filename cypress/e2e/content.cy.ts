@@ -75,6 +75,25 @@ describe('Content Tests', () => {
         .should('have.property', 'valid', false);
     });
 
+    it('should let visitors retry when reCAPTCHA fails to load', () => {
+      // Cached requests bypass cy.intercept, and earlier tests load the script
+      cy.wrap(
+        Cypress.automation('remote:debugger:protocol', {
+          command: 'Network.clearBrowserCache',
+        }),
+      );
+      cy.intercept(
+        { url: /google\.com\/recaptcha\/api\.js/, times: 1 },
+        { forceNetworkError: true },
+      );
+      cy.visit('/contact');
+      cy.get('#captcha [role="alert"]').should('contain', 'failed to load');
+      cy.get('#captcha').contains('button', 'Retry').click();
+      cy.get('#captcha .g-recaptcha iframe', { timeout: 15000 }).should(
+        'be.visible',
+      );
+    });
+
     it('should have footer', () => {
       cy.checkFooter();
     });
