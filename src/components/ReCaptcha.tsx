@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Alert, Button } from '@mui/material';
+
 declare global {
   interface Window {
     grecaptcha?: {
@@ -37,8 +39,10 @@ const loadScript = () =>
 
 export const ReCaptcha = (props: ReCaptchaProps) => {
   const container = React.useRef<HTMLDivElement>(null);
+  const [failed, setFailed] = React.useState(false);
 
   React.useEffect(() => {
+    if (failed) return;
     // Guards against rendering twice into the same element (e.g. StrictMode)
     let cancelled = false;
     loadScript().then(
@@ -53,13 +57,32 @@ export const ReCaptcha = (props: ReCaptchaProps) => {
           'error-callback': props.onError,
         });
       },
-      () => !cancelled && props.onError(),
+      () => {
+        if (cancelled) return;
+        setFailed(true);
+        props.onError();
+      },
     );
     return () => {
       cancelled = true;
     };
     // Parent remounts via `key` to reset the widget
-  }, []);
+  }, [failed]);
+
+  if (failed) {
+    return (
+      <Alert
+        severity="error"
+        action={
+          <Button color="inherit" size="small" onClick={() => setFailed(false)}>
+            Retry
+          </Button>
+        }
+      >
+        reCAPTCHA failed to load. Check your connection or ad blocker.
+      </Alert>
+    );
+  }
 
   return <div ref={container} className="g-recaptcha" />;
 };
