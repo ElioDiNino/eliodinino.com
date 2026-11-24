@@ -12,7 +12,7 @@ export default defineConfig({
       org: 'elio-org',
       project: 'eliodinino-com',
       sourcemaps: {
-        filesToDeleteAfterUpload: ['build/assets/*.js.map'],
+        deleteSourcemapsAfterUpload: true,
       },
     }),
   ],
@@ -21,7 +21,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'build',
-    sourcemap: true,
+    sourcemap: 'hidden',
     rollupOptions: {
       output: {
         codeSplitting: {
